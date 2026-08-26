@@ -18,48 +18,48 @@ export const services: Service[] = [
     slug: 'digital-marketing',
     title: 'Digital Marketing & Demand Generation',
     shortDescription:
-      'Performance marketing, SEO, paid media, and full-funnel campaigns designed to drive qualified pipeline and measurable revenue growth.',
+      'Performance marketing, Search & AI Visibility (SEO, AEO, GEO), paid media, and full-funnel campaigns designed to drive qualified pipeline and measurable revenue growth.',
     heroIntro:
-      'We help brands attract the right audiences, improve conversion performance, and turn marketing into a stronger business growth engine.',
+      'We help brands attract the right audiences, rank across Google and generative AI engines, and turn marketing into a stronger business growth engine.',
     capabilities: [
-      'SEO strategy',
-      'Content strategy',
-      'Paid media',
-      'Campaign optimization',
-      'Conversion rate optimization',
+      'Search & AI Visibility (SEO, AEO, GEO)',
+      'Generative Engine Optimization (GEO)',
+      'Answer Engine Optimization (AEO)',
+      'Paid media & PPC',
+      'Conversion rate optimization (CRO)',
       'Marketing automation',
-      'Analytics and attribution',
+      'Multi-touch analytics and attribution',
     ],
     valueProps:
-      'stronger visibility, better lead quality, clearer funnel performance, more measurable ROI',
+      'stronger AI & search visibility, better lead quality, clearer funnel performance, more measurable ROI',
     ctaText: 'Get a Growth Audit',
     learnMoreHref: '/services/digital-marketing',
   },
   {
     id: 'ai-platforms',
     slug: 'ai-platforms',
-    title: 'AI Platforms & Automation',
+    title: 'AI Agents, Custom Platforms & Automation',
     shortDescription:
-      'Custom AI solutions, intelligent workflows, and automation systems that transform how your teams operate and make decisions.',
+      'Autonomous AI agents, custom enterprise solutions, intelligent workflows, and automation systems that transform how your teams operate and scale.',
     heroIntro:
-      'We design and build AI-enabled experiences, internal tools, and standalone platforms that improve efficiency, decision-making, and digital capability.',
+      'We design and build custom AI agents, standalone platforms, internal tools, and enterprise automation systems that accelerate decision-making and operational capability.',
     capabilities: [
-      'AI workflow design',
+      'Autonomous AI agent design',
+      'Custom enterprise solutions',
       'Standalone product platforms',
-      'Internal business tools',
-      'Automation systems',
-      'Customer-facing experiences',
-      'Dashboards and reporting',
+      'Intelligent workflow automation',
+      'CRM & data system integrations',
+      'Real-time BI dashboards and reporting',
     ],
     valueProps:
-      'less manual friction, more scalable systems, faster decisions, better operational clarity',
+      'less manual friction, autonomous system leverage, faster decisions, better operational clarity',
     ctaText: 'Discuss an AI Platform',
     learnMoreHref: '/services/ai-platforms',
   },
   {
     id: 'education-marketing',
     slug: 'education-marketing',
-    title: 'Education Marketing',
+    title: 'Education Marketing & Enrollment',
     shortDescription:
       'Enrollment strategy, brand positioning, and digital campaigns purpose-built for schools, universities, and edtech organizations.',
     heroIntro:
@@ -80,21 +80,21 @@ export const services: Service[] = [
   {
     id: 'salesforce-devops',
     slug: 'salesforce-devops',
-    title: 'Salesforce DevOps & CRM',
+    title: 'Salesforce DevOps & Enterprise CRM',
     shortDescription:
       'Salesforce implementation, integration, DevOps pipelines, and CRM optimization that align sales, marketing, and service operations.',
     heroIntro:
       'We support Salesforce teams with delivery systems, environment strategy, automation, governance, and optimization.',
     capabilities: [
       'Salesforce implementation support',
-      'Org optimization',
-      'CI/CD planning',
-      'Release management',
+      'Org optimization & health checks',
+      'CI/CD release management',
+      'Automated deployment pipelines',
       'Environment strategy',
-      'Integrations and governance',
+      'Integrations and data governance',
     ],
     valueProps:
-      'safer releases, stronger visibility, better coordination, scalable delivery practices',
+      'safer releases, zero downtime, stronger visibility, scalable enterprise delivery practices',
     ctaText: 'Talk to a Salesforce Expert',
     learnMoreHref: '/services/salesforce-devops',
   },
@@ -114,14 +114,14 @@ export const subServices: SubService[] = [
   {
     id: 'web-design',
     slug: 'web-design',
-    title: 'Web Design & Development',
+    title: 'Web Design & Enterprise Development',
     parent: 'Digital Marketing & Demand Generation',
     description:
-      'High-performance websites engineered for conversion, speed, and search visibility — built on modern frameworks with clean technical architecture.',
+      'High-performance websites and custom web applications engineered for conversion, speed, and search visibility — built on modern frameworks with clean architecture.',
     capabilities: [
-      'UX/UI design systems',
-      'Next.js & React development',
-      'Headless CMS architecture',
+      'Next.js & React enterprise development',
+      'UX/UI design systems & prototyping',
+      'Headless CMS & API architecture',
       'Core Web Vitals optimization',
       'Conversion-focused landing pages',
       'Design tokens & component libraries',
@@ -130,30 +130,30 @@ export const subServices: SubService[] = [
   {
     id: 'seo',
     slug: 'seo',
-    title: 'SEO & Content Strategy',
+    title: 'Search & AI Visibility (SEO, AEO & GEO)',
     parent: 'Digital Marketing & Demand Generation',
     description:
-      'Technical SEO, content architecture, and editorial programs that compound organic visibility and pull qualified demand into your funnel.',
+      'Omni-search discovery: Technical SEO, Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO) engineered for Google, ChatGPT, Perplexity, Gemini, and Claude citations.',
     capabilities: [
-      'Technical SEO audits',
-      'Keyword & topic strategy',
-      'Editorial calendars',
-      'On-page optimization',
-      'Internal linking architecture',
-      'Authority & link building',
+      'Generative Engine Optimization (GEO)',
+      'Answer Engine Optimization (AEO)',
+      'Technical SEO audits & architecture',
+      'AI Overviews & citation strategy',
+      'Entity & knowledge graph schema',
+      'Authority & strategic link building',
     ],
   },
   {
     id: 'ppc',
     slug: 'ppc',
-    title: 'Paid Media & PPC',
+    title: 'Paid Media & Performance PPC',
     parent: 'Digital Marketing & Demand Generation',
     description:
       'Full-funnel paid media across Google, LinkedIn, Meta, and programmatic — engineered for qualified pipeline, not vanity clicks.',
     capabilities: [
       'Google & Microsoft Ads',
       'LinkedIn demand campaigns',
-      'Meta & programmatic',
+      'Meta & programmatic networks',
       'Audience targeting & retargeting',
       'Landing page optimization',
       'Attribution & ROI modeling',
@@ -162,10 +162,10 @@ export const subServices: SubService[] = [
   {
     id: 'social-media',
     slug: 'social-media',
-    title: 'Social Media Marketing',
+    title: 'Social Media & Brand Authority',
     parent: 'Digital Marketing & Demand Generation',
     description:
-      'Always-on social programs that build brand authority, support talent and recruiting, and amplify campaign moments across channels.',
+      'Always-on social programs that build brand authority, support talent recruiting, and amplify campaign moments across channels.',
     capabilities: [
       'Channel strategy & positioning',
       'Content calendars',
@@ -456,18 +456,17 @@ export const processSteps = [
 export const valueWords = ['Visibility', 'Engagement', 'Automation', 'Scale'];
 
 export const footerServiceLinks = [
-  { label: 'Web Design & Development', href: '/services/web-design' },
-  { label: 'SEO & Content Strategy', href: '/services/seo' },
-  { label: 'Paid Media & PPC', href: '/services/ppc' },
-  { label: 'Social Media Marketing', href: '/services/social-media' },
-  { label: 'Analytics & CRO', href: '/services/analytics' },
+  { label: 'Search & AI Visibility (SEO, AEO, GEO)', href: '/services/seo' },
+  { label: 'AI Agents & Custom Platforms', href: '/services/ai-platforms' },
+  { label: 'Web Design & Enterprise Dev', href: '/services/web-design' },
+  { label: 'Paid Media & Performance PPC', href: '/services/ppc' },
+  { label: 'Salesforce DevOps & CRM', href: '/services/salesforce-devops' },
 ];
 
 export const footerCompanyLinks = [
   { label: 'About Us', href: '/about' },
   { label: 'Our Work', href: '/work' },
   { label: 'Blog', href: '/blog' },
-  { label: 'Careers', href: '/careers' },
   { label: 'Contact', href: '/contact' },
 ];
 

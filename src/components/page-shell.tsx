@@ -131,6 +131,7 @@ export function PageCtaBand({
   body = 'Whether you need better demand generation, a smarter platform, stronger enrollment journeys, or cleaner Salesforce delivery, ISD can help define the right next move.',
   primaryCta = 'Schedule a Discovery Call',
   secondaryCta = 'Send Your Project Brief',
+  secondaryHref = '/contact',
   title,
   subtitle,
   ctaText,
@@ -140,6 +141,7 @@ export function PageCtaBand({
   body?: string;
   primaryCta?: string;
   secondaryCta?: string;
+  secondaryHref?: string;
   title?: string;
   subtitle?: string;
   ctaText?: string;
@@ -148,6 +150,7 @@ export function PageCtaBand({
   const finalHeading = title || heading;
   const finalBody = subtitle || body;
   const finalPrimaryCta = ctaText || primaryCta;
+  const finalSecondaryHref = secondaryHref || (secondaryCta.toLowerCase().includes('service') ? '/services' : '/contact');
 
   return (
     <section className="relative overflow-hidden bg-[var(--carbon)] py-24 text-white md:py-32">
@@ -191,7 +194,7 @@ export function PageCtaBand({
                   variant="outline"
                   className="h-12 rounded-xl border border-white/20 bg-white/5 px-7 font-heading text-base font-semibold text-white backdrop-blur hover:bg-white hover:text-[var(--carbon)] hover:-translate-y-0.5"
                 >
-                  <Link href="/services">{secondaryCta}</Link>
+                  <Link href={finalSecondaryHref}>{secondaryCta}</Link>
                 </Button>
               </Magnetic>
             </div>
