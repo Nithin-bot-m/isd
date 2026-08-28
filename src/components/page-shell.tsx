@@ -34,29 +34,28 @@ export function PageShell({
   eyebrow,
 }: PageShellProps) {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
       <main className="flex-1" id="main-content">
         {/* Sub-page Hero with Homepage-grade ambient visuals */}
-        <section className="relative overflow-hidden pt-32 pb-20 md:pt-44 md:pb-28 bg-[var(--carbon)] text-white">
-          {/* Navy gradient backdrop */}
+        <section className="relative overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-44 md:pb-28 bg-[#0A0F1D] text-white">
+          {/* Dynamic atmospheric mesh background */}
+          <div className="mesh-bg absolute inset-0 opacity-80" aria-hidden />
+          
+          {/* Precision grid */}
+          <div className="grid-overlay absolute inset-0 opacity-20" aria-hidden />
+          
+          {/* Ambient Luminous Aurora Orbs */}
           <div
-            className="absolute inset-0 z-0 bg-gradient-to-br from-[var(--carbon)] via-[var(--carbon)] to-[color-mix(in_oklch,var(--carbon)_80%,var(--accent))]"
+            className="absolute -top-32 -right-24 h-96 w-96 rounded-full bg-[#0284C7]/20 blur-[120px] pointer-events-none"
             aria-hidden
           />
-          {/* Subtle grid */}
-          <div className="grid-overlay absolute inset-0 z-0 opacity-[0.15]" aria-hidden />
-          {/* Ambient Glow Orbs */}
           <div
-            className="absolute -top-32 -right-24 h-80 w-80 rounded-full bg-[var(--accent)] opacity-20 blur-3xl animate-pulse"
-            aria-hidden
-          />
-          <div
-            className="absolute -bottom-32 -left-24 h-80 w-80 rounded-full bg-[var(--accent)] opacity-15 blur-3xl"
+            className="absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-[#6366F1]/15 blur-[120px] pointer-events-none"
             aria-hidden
           />
 
-          <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl">
               {eyebrow && (
                 <motion.div
@@ -64,8 +63,8 @@ export function PageShell({
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4 }}
                 >
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.12em] text-white/90 backdrop-blur">
-                    <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
+                  <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-3.5 py-1 text-[0.72rem] sm:text-[0.78rem] font-semibold uppercase tracking-[0.12em] text-sky-400 backdrop-blur-md mb-3 sm:mb-4 shadow-sm">
+                    <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-emerald-400" />
                     {eyebrow}
                   </span>
                 </motion.div>
@@ -75,7 +74,7 @@ export function PageShell({
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.06 }}
-                className="mt-6 text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-6xl"
+                className="text-3xl font-extrabold leading-[1.12] tracking-tight text-white sm:text-4xl md:text-6xl"
               >
                 {title}
               </motion.h1>
@@ -85,7 +84,7 @@ export function PageShell({
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.14 }}
-                  className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl"
+                  className="mt-4 sm:mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg md:text-xl font-normal"
                 >
                   {intro}
                 </motion.p>
@@ -113,14 +112,14 @@ export function PageSection({
 }) {
   const bg =
     variant === 'dark'
-      ? 'bg-[var(--carbon)] text-white'
+      ? 'bg-[#0A0F1D] text-white'
       : variant === 'mist'
-      ? 'bg-muted/40'
+      ? 'bg-muted/30'
       : 'bg-background';
 
   return (
-    <section className={`py-20 md:py-28 ${bg} ${className}`}>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">{children}</div>
+    <section className={`py-14 sm:py-20 md:py-28 relative ${bg} ${className}`}>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{children}</div>
     </section>
   );
 }
@@ -153,54 +152,56 @@ export function PageCtaBand({
   const finalSecondaryHref = secondaryHref || (secondaryCta.toLowerCase().includes('service') ? '/services' : '/contact');
 
   return (
-    <section className="relative overflow-hidden bg-[var(--carbon)] py-24 text-white md:py-32">
+    <section className="relative overflow-hidden bg-[#0A0F1D] py-16 text-white sm:py-24 md:py-32">
       <div className="mesh-bg absolute inset-0 opacity-90" aria-hidden />
-      <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
+      <div className="grid-overlay absolute inset-0 opacity-15" aria-hidden />
+      
+      <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-8 text-center backdrop-blur-xl md:p-14">
-            <div className="absolute left-0 right-0 top-0 h-1.5 bg-gradient-to-r from-[var(--accent)] via-[color-mix(in_oklch,var(--accent)_60%,white)] to-[var(--accent)]" />
+          <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-white/[0.05] p-6 text-center backdrop-blur-2xl shadow-2xl sm:p-10 md:p-14">
+            <div className="absolute left-0 right-0 top-0 h-1.5 bg-gradient-to-r from-sky-400 via-indigo-400 to-amber-400" />
 
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[var(--accent)]">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-bold uppercase tracking-wider text-sky-400 backdrop-blur-md">
               <Sparkles className="h-3.5 w-3.5" />
               Take the Next Step
             </span>
 
-            <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-5xl">
+            <h2 className="mt-4 text-2xl font-extrabold tracking-tight text-white sm:text-3xl md:text-5xl">
               {finalHeading}
             </h2>
 
-            <p className="mx-auto mt-4 max-w-xl text-base text-white/70 md:text-lg">
+            <p className="mx-auto mt-3 sm:mt-4 max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base md:text-lg">
               {finalBody}
             </p>
 
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Magnetic as="div" className="inline-flex">
+            <div className="mt-8 sm:mt-9 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
+              <Magnetic as="div" className="inline-flex w-full sm:w-auto">
                 <Button
                   asChild
                   size="lg"
-                  className="h-12 rounded-xl bg-[var(--accent)] px-8 font-heading text-base font-bold text-white shadow-xl shadow-[var(--accent)]/30 transition-all hover:bg-[color-mix(in_oklch,var(--accent)_85%,black)] hover:shadow-2xl hover:-translate-y-0.5"
+                  className="h-12 sm:h-13 w-full sm:w-auto rounded-xl bg-gradient-to-r from-[#0284C7] to-[#0369A1] px-7 sm:px-9 font-heading text-sm sm:text-base font-bold text-white shadow-xl shadow-[#0284C7]/30 transition-all hover:shadow-2xl hover:shadow-[#0284C7]/40 hover:-translate-y-0.5"
                 >
                   <Link href={ctaHref}>
                     {finalPrimaryCta}
-                    <ArrowRight className="h-4 w-4 ml-1.5" />
+                    <ArrowRight className="h-4 w-4 ml-2" />
                   </Link>
                 </Button>
               </Magnetic>
 
-              <Magnetic as="div" className="inline-flex">
+              <Magnetic as="div" className="inline-flex w-full sm:w-auto">
                 <Button
                   asChild
                   size="lg"
                   variant="outline"
-                  className="h-12 rounded-xl border border-white/20 bg-white/5 px-7 font-heading text-base font-semibold text-white backdrop-blur hover:bg-white hover:text-[var(--carbon)] hover:-translate-y-0.5"
+                  className="h-12 sm:h-13 w-full sm:w-auto rounded-xl border border-white/20 bg-white/[0.05] px-6 sm:px-8 font-heading text-sm sm:text-base font-semibold text-white backdrop-blur hover:bg-white hover:text-[#0A0F1D] hover:-translate-y-0.5 transition-all"
                 >
                   <Link href={finalSecondaryHref}>{secondaryCta}</Link>
                 </Button>
               </Magnetic>
             </div>
 
-            <div className="mt-8 flex items-center justify-center gap-2 text-xs text-white/60">
-              <ShieldCheck className="h-4 w-4 text-[var(--accent)]" />
+            <div className="mt-7 sm:mt-9 flex flex-wrap items-center justify-center gap-2 text-xs font-medium text-slate-400">
+              <ShieldCheck className="h-4 w-4 text-sky-400 shrink-0" />
               <span>Full Strategy Assessment &bull; Zero Commitment &bull; 24hr Response</span>
             </div>
           </div>
@@ -209,3 +210,4 @@ export function PageCtaBand({
     </section>
   );
 }
+

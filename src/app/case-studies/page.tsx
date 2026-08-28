@@ -3,7 +3,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, CheckCircle2, TrendingUp, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle2, TrendingUp, Sparkles, Layers } from 'lucide-react';
 import { PageShell, PageSection, PageCtaBand } from '@/components/page-shell';
 import { Reveal } from '@/components/reveal';
 import { Button } from '@/components/ui/button';
@@ -55,16 +55,16 @@ export default function CaseStudiesPage() {
     >
       <PageSection>
         {/* Filter Pills */}
-        <Reveal className="mb-12 flex flex-wrap gap-2">
+        <Reveal className="mb-12 flex flex-wrap gap-2.5">
           {filterCategories.map((cat) => (
             <button
               key={cat}
               type="button"
               onClick={() => setActive(cat)}
-              className={`rounded-full px-5 py-2 text-xs font-semibold transition-all ${
+              className={`rounded-full px-5 py-2.5 text-xs font-bold transition-all cursor-pointer ${
                 active === cat
-                  ? 'bg-[var(--accent)] text-white shadow-md shadow-[var(--accent)]/20'
-                  : 'border border-border bg-card text-muted-foreground hover:text-foreground hover:border-[var(--accent)]/40'
+                  ? 'bg-[#0284C7] dark:bg-[#38BDF8] text-white dark:text-[#030712] shadow-lg shadow-[#0284C7]/25'
+                  : 'border border-border bg-card text-muted-foreground hover:text-foreground hover:border-[#0284C7]/40'
               }`}
             >
               {cat}
@@ -101,9 +101,9 @@ function CaseStudyCard({
   index: number;
 }) {
   const gradients = [
-    'from-[#0369a1] to-[#0284c7]',
-    'from-[#0f172a] to-[#334155]',
-    'from-[#0d9488] to-[#14b8a6]',
+    'from-[#0369A1] via-[#0284C7] to-[#0EA5E9]',
+    'from-[#0F172A] via-[#1E293B] to-[#334155]',
+    'from-[#0F766E] via-[#0D9488] to-[#14B8A6]',
   ];
 
   return (
@@ -114,49 +114,50 @@ function CaseStudyCard({
       exit={{ opacity: 0, y: 15 }}
       whileHover={{ y: -4 }}
       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-      className="group grid gap-8 rounded-3xl border border-border bg-card p-8 shadow-sm transition-all hover:border-[var(--accent)] hover:shadow-2xl md:grid-cols-[1fr_2fr] md:p-10"
+      className="group grid gap-8 rounded-3xl border border-border bg-card p-8 shadow-sm transition-all hover:border-[#0284C7] hover:shadow-2xl md:grid-cols-[1fr_2fr] md:p-10"
     >
       <div
         className={`relative aspect-[16/10] overflow-hidden rounded-2xl bg-gradient-to-br ${
           gradients[index % gradients.length]
-        } flex items-center justify-center p-6 text-white text-center`}
+        } flex items-center justify-center p-6 text-white text-center shadow-md`}
       >
-        <div>
+        <div className="relative z-10">
           <span className="text-xs font-bold uppercase tracking-widest text-white/80">
             {study.tag}
           </span>
           <p className="mt-2 font-heading text-lg font-bold leading-snug">{study.title}</p>
         </div>
+        <div className="absolute inset-0 bg-black/10 backdrop-blur-[1px]" />
       </div>
 
       <div className="flex flex-col justify-between">
         <div>
           <div className="flex flex-wrap items-center gap-2 mb-4">
-            <span className="rounded-full bg-[var(--accent)]/10 px-3 py-1 text-xs font-semibold text-[var(--accent)]">
+            <span className="rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/15 px-3 py-1 text-xs font-bold text-[#0284C7] dark:text-[#38BDF8]">
               {study.tag}
             </span>
             {study.tags.map((t) => (
               <span
                 key={t}
-                className="rounded-full border border-border bg-muted px-2.5 py-0.5 text-[0.7rem] font-medium text-muted-foreground"
+                className="rounded-full border border-border bg-muted px-2.5 py-0.5 text-[0.7rem] font-semibold text-muted-foreground"
               >
                 {t}
               </span>
             ))}
           </div>
 
-          <h2 className="font-heading text-2xl font-bold leading-snug transition-colors group-hover:text-[var(--accent)] md:text-3xl">
+          <h2 className="font-heading text-2xl font-bold leading-snug transition-colors group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8] md:text-3xl">
             {study.title}
           </h2>
 
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
-            <div className="rounded-2xl border border-border/80 bg-muted/30 p-4">
+            <div className="rounded-2xl border border-border/80 bg-muted/40 p-4">
               <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                 Challenge
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-foreground">{study.challenge}</p>
             </div>
-            <div className="rounded-2xl border border-border/80 bg-muted/30 p-4">
+            <div className="rounded-2xl border border-border/80 bg-muted/40 p-4">
               <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                 Solution
               </h3>
@@ -164,8 +165,8 @@ function CaseStudyCard({
             </div>
           </div>
 
-          <div className="mt-6 rounded-2xl border-l-4 border-[var(--accent)] bg-muted/50 p-5">
-            <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[var(--accent)]">
+          <div className="mt-6 rounded-2xl border-l-4 border-[#0284C7] dark:border-[#38BDF8] bg-muted/50 p-5 shadow-sm">
+            <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8]">
               <TrendingUp className="h-3.5 w-3.5" />
               Measurable Result
             </div>
@@ -178,7 +179,7 @@ function CaseStudyCard({
         <div className="mt-8 border-t border-border/80 pt-5">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 font-heading text-sm font-bold text-[var(--accent)] hover:underline"
+            className="inline-flex items-center gap-2 font-heading text-sm font-bold text-[#0284C7] dark:text-[#38BDF8] hover:underline"
           >
             Discuss a similar initiative
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -188,3 +189,4 @@ function CaseStudyCard({
     </motion.article>
   );
 }
+

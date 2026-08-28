@@ -63,16 +63,16 @@ export default function InsightsPage() {
     >
       <PageSection>
         {/* Filter Pills */}
-        <Reveal className="mb-12 flex flex-wrap gap-2">
+        <Reveal className="mb-12 flex flex-wrap gap-2.5">
           {filterCategories.map((cat) => (
             <button
               key={cat}
               type="button"
               onClick={() => setActive(cat)}
-              className={`rounded-full px-5 py-2 text-xs font-semibold transition-all ${
+              className={`rounded-full px-5 py-2.5 text-xs font-bold transition-all cursor-pointer ${
                 active === cat
-                  ? 'bg-[var(--accent)] text-white shadow-md shadow-[var(--accent)]/20'
-                  : 'border border-border bg-card text-muted-foreground hover:text-foreground hover:border-[var(--accent)]/40'
+                  ? 'bg-[#0284C7] dark:bg-[#38BDF8] text-white dark:text-[#030712] shadow-lg shadow-[#0284C7]/25'
+                  : 'border border-border bg-card text-muted-foreground hover:text-foreground hover:border-[#0284C7]/40'
               }`}
             >
               {cat}
@@ -95,11 +95,11 @@ export default function InsightsPage() {
       <PageSection variant="mist">
         <Reveal>
           <div className="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-border bg-card p-8 text-center shadow-xl md:p-14">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--accent)]/10 px-3 py-1 text-xs font-semibold text-[var(--accent)]">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-3">
               <Mail className="h-3.5 w-3.5" />
               Monthly Growth Dispatch
-            </span>
-            <h2 className="mt-4 font-heading text-3xl font-bold md:text-4xl">
+            </div>
+            <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-4xl">
               Get insights in your inbox
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
@@ -107,7 +107,7 @@ export default function InsightsPage() {
             </p>
 
             {subscribed ? (
-              <div className="mt-8 rounded-2xl bg-[var(--accent)]/10 p-6 text-[var(--accent)] font-semibold">
+              <div className="mt-8 rounded-2xl bg-[#0284C7]/10 dark:bg-[#38BDF8]/15 p-6 text-[#0284C7] dark:text-[#38BDF8] font-bold">
                 🎉 Thank you for subscribing! Watch for our next briefing.
               </div>
             ) : (
@@ -118,12 +118,12 @@ export default function InsightsPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@company.com"
-                  className="h-12 w-full rounded-xl border border-border bg-muted/40 px-4 text-sm text-foreground placeholder:text-muted-foreground/50 focus:border-[var(--accent)] focus:bg-card focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/20 sm:max-w-xs"
+                  className="h-12 w-full rounded-xl border border-border bg-muted/40 px-4 text-sm text-foreground placeholder:text-muted-foreground/50 focus:border-[#0284C7] focus:bg-card focus:outline-none focus:ring-2 focus:ring-[#0284C7]/20 sm:max-w-xs font-medium"
                 />
                 <Button
                   type="submit"
                   size="lg"
-                  className="h-12 rounded-xl bg-[var(--accent)] px-7 font-heading text-sm font-semibold text-white shadow-md hover:bg-[color-mix(in_oklch,var(--accent)_85%,black)]"
+                  className="h-12 rounded-xl bg-gradient-to-r from-[#0284C7] to-[#0369A1] px-7 font-heading text-sm font-bold text-white shadow-md hover:shadow-lg"
                 >
                   Subscribe
                   <Send className="h-3.5 w-3.5 ml-2" />
@@ -153,9 +153,9 @@ function InsightCard({
   index: number;
 }) {
   const gradients = [
-    'from-[#0369a1] to-[#0284c7]',
-    'from-[#0f172a] to-[#334155]',
-    'from-[#0d9488] to-[#14b8a6]',
+    'from-[#0369A1] via-[#0284C7] to-[#0EA5E9]',
+    'from-[#0F172A] via-[#1E293B] to-[#334155]',
+    'from-[#0F766E] via-[#0D9488] to-[#14B8A6]',
   ];
 
   return (
@@ -163,10 +163,10 @@ function InsightCard({
       layout
       whileHover={{ y: -4 }}
       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-      className="group flex h-full flex-col justify-between rounded-3xl border border-border bg-card p-6 shadow-sm transition-all hover:border-[var(--accent)] hover:shadow-xl"
+      className="group flex h-full flex-col justify-between rounded-3xl border border-border bg-card p-6 shadow-sm transition-all hover:border-[#0284C7] hover:shadow-xl"
     >
       <div>
-        <div className="relative aspect-[16/10] overflow-hidden rounded-2xl">
+        <div className="relative aspect-[16/10] overflow-hidden rounded-2xl shadow-sm">
           <div
             className={`absolute inset-0 bg-gradient-to-br ${
               gradients[index % gradients.length]
@@ -177,10 +177,10 @@ function InsightCard({
         </div>
 
         <div className="mt-5">
-          <span className="text-xs font-bold uppercase tracking-wider text-[var(--accent)]">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8]">
             {post.category}
           </span>
-          <h3 className="mt-2 font-heading text-xl font-bold leading-snug transition-colors group-hover:text-[var(--accent)]">
+          <h3 className="mt-2 font-heading text-xl font-bold leading-snug text-foreground transition-colors group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8]">
             {post.title}
           </h3>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -191,8 +191,9 @@ function InsightCard({
 
       <div className="mt-6 flex items-center justify-between border-t border-border/80 pt-4 text-xs text-muted-foreground">
         <span>{post.date}</span>
-        <span className="font-semibold text-foreground">{post.readTime}</span>
+        <span className="font-bold text-foreground">{post.readTime}</span>
       </div>
     </motion.article>
   );
 }
+

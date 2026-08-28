@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, Sparkles, Layers } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Sparkles, Layers, ShieldCheck, Zap } from 'lucide-react';
 import { PageShell, PageSection, PageCtaBand } from '@/components/page-shell';
 import { Reveal } from '@/components/reveal';
 import { services, caseStudies } from '@/lib/data';
@@ -24,16 +24,17 @@ const whyClientsHire = [
 export default function ServicesPage() {
   return (
     <PageShell
-      eyebrow="Services"
-      title={<>Integrated services for <span className="text-gradient">modern growth</span></>}
-      intro="ISD combines digital marketing, AI platforms, education marketing, and Salesforce DevOps into a single, connected growth engine. Every service reinforces the next."
+      eyebrow="Master Architecture"
+      title={<>Integrated engines for <span className="text-gradient">enterprise growth</span></>}
+      intro="ISD combines Digital Growth Engineering™, Enterprise Solution Engineering™, Education Ecosystem Engineering™, and Salesforce & Copado DevOps into a single, connected operational engine. Every pillar reinforces the next."
     >
       <PageSection>
         <Reveal className="mb-14 max-w-2xl">
-          <span className="text-[0.78rem] font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-3">
+            <Layers className="h-3.5 w-3.5" />
             What We Do
-          </span>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-5xl">
+          </div>
+          <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">
             Four practices, one connected architecture
           </h2>
           <p className="mt-4 text-base text-muted-foreground md:text-lg">
@@ -52,10 +53,11 @@ export default function ServicesPage() {
 
       <PageSection variant="mist">
         <Reveal className="mb-14 max-w-2xl">
-          <span className="text-[0.78rem] font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-3">
+            <Zap className="h-3.5 w-3.5" />
             Growth Sequence
-          </span>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-5xl">
+          </div>
+          <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">
             How services connect
           </h2>
           <p className="mt-4 text-base text-muted-foreground md:text-lg">
@@ -69,10 +71,10 @@ export default function ServicesPage() {
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative flex h-full flex-col justify-between rounded-3xl border border-border bg-card p-7 shadow-sm transition-all hover:border-[var(--accent)] hover:shadow-xl"
+                className="group relative flex h-full flex-col justify-between rounded-3xl border border-border bg-card p-7 shadow-sm transition-all hover:border-[#0284C7]/60 hover:shadow-xl dark:hover:border-[#38BDF8]/60"
               >
                 <div>
-                  <span className="font-heading text-3xl font-extrabold text-[var(--accent)]/40 transition-colors group-hover:text-[var(--accent)]">
+                  <span className="font-heading text-3xl font-extrabold text-[#0284C7]/40 dark:text-[#38BDF8]/40 transition-colors group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8]">
                     {item.step}
                   </span>
                   <h3 className="mt-4 font-heading text-xl font-bold text-foreground">
@@ -90,10 +92,11 @@ export default function ServicesPage() {
 
       <PageSection>
         <Reveal className="mb-14 max-w-2xl">
-          <span className="text-[0.78rem] font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-3">
+            <ShieldCheck className="h-3.5 w-3.5" />
             Client Advantages
-          </span>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-5xl">
+          </div>
+          <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">
             Why clients hire ISD
           </h2>
           <p className="mt-4 text-base text-muted-foreground md:text-lg">
@@ -107,10 +110,10 @@ export default function ServicesPage() {
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="h-full rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:border-[var(--accent)]/50 hover:shadow-md"
+                className="h-full rounded-3xl border border-border bg-card p-6 shadow-sm transition-all hover:border-[#0284C7]/50 hover:shadow-md"
               >
-                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[var(--accent)]/10 text-[var(--accent)]">
-                  <CheckCircle2 className="h-4 w-4" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0284C7]/10 text-[#0284C7] dark:bg-[#38BDF8]/15 dark:text-[#38BDF8]">
+                  <CheckCircle2 className="h-5 w-5" />
                 </div>
                 <h3 className="mt-4 font-heading text-lg font-bold text-foreground">
                   {item.title}
@@ -126,10 +129,11 @@ export default function ServicesPage() {
 
       <PageSection variant="mist">
         <Reveal className="mb-14 max-w-2xl">
-          <span className="text-[0.78rem] font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-3">
+            <Sparkles className="h-3.5 w-3.5" />
             Verified Proof
-          </span>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-5xl">
+          </div>
+          <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">
             Related case studies
           </h2>
           <p className="mt-4 text-base text-muted-foreground md:text-lg">
@@ -142,21 +146,21 @@ export default function ServicesPage() {
             <Reveal key={study.id} delay={i * 0.08}>
               <Link
                 href="/case-studies"
-                className="group flex flex-col justify-between rounded-3xl border border-border bg-card p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-[var(--accent)] hover:shadow-xl"
+                className="group flex flex-col justify-between rounded-3xl border border-border bg-card p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-[#0284C7] hover:shadow-xl"
               >
                 <div>
-                  <span className="inline-flex items-center rounded-full border border-border bg-muted px-3 py-0.5 text-xs font-semibold text-muted-foreground">
+                  <span className="inline-flex items-center rounded-full border border-border bg-muted px-3 py-1 text-xs font-bold text-muted-foreground">
                     {study.tags[0]}
                   </span>
-                  <h3 className="mt-3 font-heading text-2xl font-bold transition-colors group-hover:text-[var(--accent)]">
+                  <h3 className="mt-3 font-heading text-2xl font-bold transition-colors group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8]">
                     {study.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                     {study.challenge}
                   </p>
                 </div>
-                <div className="mt-6 border-l-4 border-[var(--accent)] bg-muted/40 p-4 rounded-r-xl">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[var(--accent)]">
+                <div className="mt-6 border-l-4 border-[#0284C7] dark:border-[#38BDF8] bg-muted/40 p-4 rounded-r-2xl">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8]">
                     Result
                   </span>
                   <p className="mt-1 font-heading text-base font-bold text-foreground">
@@ -190,23 +194,23 @@ function ServiceCard({
     <motion.article
       whileHover={{ y: -6 }}
       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-border bg-card p-8 transition-all hover:border-[var(--accent)] hover:shadow-2xl md:p-10"
+      className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-border bg-card p-8 transition-all hover:border-[#0284C7] hover:shadow-2xl md:p-10"
     >
       <div
-        className="absolute inset-x-0 top-0 h-1.5 origin-left scale-x-0 bg-gradient-to-r from-[var(--accent)] via-[color-mix(in_oklch,var(--accent)_60%,white)] to-[var(--accent)] transition-transform duration-500 group-hover:scale-x-100"
+        className="absolute inset-x-0 top-0 h-1.5 origin-left scale-x-0 bg-gradient-to-r from-[#0284C7] via-[#38BDF8] to-[#D97706] transition-transform duration-500 group-hover:scale-x-100"
         aria-hidden
       />
       <div>
         <div className="mb-6 flex items-center justify-between">
-          <span className="grid h-12 w-12 place-items-center rounded-2xl bg-[var(--accent)]/10 font-heading text-lg font-bold text-[var(--accent)] transition-colors group-hover:bg-[var(--accent)] group-hover:text-white">
+          <span className="grid h-12 w-12 place-items-center rounded-2xl bg-[#0284C7]/10 dark:bg-[#38BDF8]/15 font-heading text-lg font-bold text-[#0284C7] dark:text-[#38BDF8] transition-colors group-hover:bg-[#0284C7] group-hover:text-white dark:group-hover:bg-[#38BDF8] dark:group-hover:text-[#030712]">
             {String(index + 1).padStart(2, '0')}
           </span>
-          <span className="rounded-full border border-border bg-muted px-3 py-1 text-xs font-semibold text-muted-foreground">
+          <span className="rounded-full border border-border bg-muted px-3 py-1 text-xs font-bold text-muted-foreground">
             Specialized Practice
           </span>
         </div>
 
-        <h3 className="font-heading text-2xl font-bold tracking-tight transition-colors group-hover:text-[var(--accent)]">
+        <h3 className="font-heading text-2xl font-bold tracking-tight transition-colors group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8]">
           {service.title}
         </h3>
         <p className="mt-3 text-base leading-relaxed text-muted-foreground">
@@ -217,7 +221,7 @@ function ServiceCard({
           {service.capabilities.slice(0, 5).map((cap) => (
             <span
               key={cap}
-              className="inline-flex items-center rounded-lg border border-border bg-muted/60 px-2.5 py-1 text-xs font-medium text-muted-foreground"
+              className="inline-flex items-center rounded-lg border border-border bg-muted/60 px-2.5 py-1 text-xs font-semibold text-muted-foreground"
             >
               {cap}
             </span>
@@ -228,7 +232,7 @@ function ServiceCard({
       <div className="mt-8 border-t border-border/80 pt-5">
         <Link
           href={`/services/${service.slug}`}
-          className="inline-flex items-center gap-2 font-heading text-sm font-bold text-[var(--accent)] hover:underline"
+          className="inline-flex items-center gap-2 font-heading text-sm font-bold text-[#0284C7] dark:text-[#38BDF8] hover:underline"
         >
           Explore practice details
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -237,3 +241,4 @@ function ServiceCard({
     </motion.article>
   );
 }
+

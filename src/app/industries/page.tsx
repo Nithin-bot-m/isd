@@ -36,25 +36,22 @@ export default function IndustriesPage() {
         <div className="grid gap-12 lg:grid-cols-2">
           {industries.map((ind, i) => {
             const Icon = industryIcons[ind.id] || Building2;
-            const relevantCaseStudy = caseStudies.find((c) =>
-              c.tags.some((t) => t.toLowerCase().includes(ind.title.toLowerCase().split(' ')[0]))
-            );
 
             return (
               <Reveal key={ind.id} delay={i * 0.1}>
                 <div
                   id={ind.id}
-                  className="group flex h-full flex-col justify-between rounded-3xl border border-border bg-card p-8 shadow-sm transition-all hover:border-[var(--accent)] hover:shadow-xl md:p-10"
+                  className="group flex h-full flex-col justify-between rounded-3xl border border-border bg-card p-8 shadow-sm transition-all hover:border-[#0284C7] hover:shadow-2xl md:p-10"
                 >
                   <div>
                     <div className="flex items-center justify-between border-b border-border/80 pb-6">
                       <div className="flex items-center gap-3">
-                        <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[var(--accent)]/10 text-[var(--accent)] transition-colors group-hover:bg-[var(--accent)] group-hover:text-white">
+                        <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[#0284C7]/10 dark:bg-[#38BDF8]/15 text-[#0284C7] dark:text-[#38BDF8] transition-colors group-hover:bg-[#0284C7] group-hover:text-white dark:group-hover:bg-[#38BDF8] dark:group-hover:text-[#030712]">
                           <Icon className="h-6 w-6" />
                         </div>
                         <div>
-                          <h2 className="font-heading text-2xl font-bold">{ind.title}</h2>
-                          <span className="text-xs font-semibold uppercase tracking-wider text-[var(--accent)]">
+                          <h2 className="font-heading text-2xl font-bold text-foreground">{ind.title}</h2>
+                          <span className="text-xs font-bold uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8]">
                             Core Sector Practice
                           </span>
                         </div>
@@ -72,22 +69,22 @@ export default function IndustriesPage() {
                       <ul className="grid gap-2 sm:grid-cols-2">
                         {ind.services.map((srv, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-xs text-muted-foreground">
-                            <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[var(--accent)]" />
-                            <span>{srv}</span>
+                            <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#0284C7] dark:text-[#38BDF8]" />
+                            <span className="font-medium">{srv}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    <div className="mt-6 rounded-2xl border border-[var(--accent)]/20 bg-muted/40 p-4">
-                      <h4 className="text-xs font-bold uppercase tracking-wider text-[var(--accent)]">
+                    <div className="mt-6 rounded-2xl border border-[#0284C7]/20 dark:border-[#38BDF8]/20 bg-muted/40 p-4">
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8]">
                         Target Strategic Outcomes:
                       </h4>
                       <div className="mt-2 flex flex-wrap gap-2">
                         {ind.outcomes.map((out, idx) => (
                           <span
                             key={idx}
-                            className="rounded-lg border border-border bg-card px-2.5 py-1 text-xs font-medium text-foreground"
+                            className="rounded-lg border border-border bg-card px-2.5 py-1 text-xs font-semibold text-foreground shadow-sm"
                           >
                             {out}
                           </span>
@@ -97,7 +94,7 @@ export default function IndustriesPage() {
                   </div>
 
                   <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-border/80 pt-6">
-                    <Button asChild size="sm" className="rounded-xl bg-[var(--accent)] text-white hover:bg-[color-mix(in_oklch,var(--accent)_85%,black)]">
+                    <Button asChild size="sm" className="h-10 rounded-xl bg-gradient-to-r from-[#0284C7] to-[#0369A1] font-bold text-white shadow-md hover:shadow-lg">
                       <Link href={`/contact?industry=${ind.id}`}>
                         Discuss Your {ind.title} Roadmap
                         <ArrowRight className="h-3.5 w-3.5" />
@@ -106,7 +103,7 @@ export default function IndustriesPage() {
 
                     <Link
                       href="/case-studies"
-                      className="text-xs font-semibold text-[var(--accent)] hover:underline"
+                      className="text-xs font-bold text-[#0284C7] dark:text-[#38BDF8] hover:underline"
                     >
                       View Related Proof &rarr;
                     </Link>
@@ -127,3 +124,4 @@ export default function IndustriesPage() {
     </PageShell>
   );
 }
+

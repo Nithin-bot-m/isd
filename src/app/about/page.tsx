@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { PageShell, PageSection, PageCtaBand } from '@/components/page-shell';
 import { Reveal } from '@/components/reveal';
-import { CheckCircle2, Sparkles, Target, Compass, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, Sparkles, Target, Compass, ShieldCheck, Users, Award } from 'lucide-react';
 
 const beliefs = [
   { title: 'Clarity drives growth', desc: 'We believe that clear strategy, clear messaging, and clear systems create the foundation for sustainable business growth.' },
@@ -43,10 +43,11 @@ export default function AboutPage() {
       <PageSection>
         <div className="grid gap-12 lg:grid-cols-[5fr_7fr] lg:items-center">
           <Reveal>
-            <span className="text-[0.78rem] font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-3">
+              <Sparkles className="h-3.5 w-3.5" />
               Who We Are
-            </span>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-5xl">
+            </div>
+            <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">
               Strategy without execution is just consulting
             </h2>
           </Reveal>
@@ -73,10 +74,11 @@ export default function AboutPage() {
 
       <PageSection variant="mist">
         <Reveal className="mb-14 max-w-2xl">
-          <span className="text-[0.78rem] font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-3">
+            <Target className="h-3.5 w-3.5" />
             What We Believe
-          </span>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-5xl">
+          </div>
+          <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">
             The principles that guide every engagement
           </h2>
         </Reveal>
@@ -87,9 +89,9 @@ export default function AboutPage() {
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="h-full rounded-3xl border border-border bg-card p-8 shadow-sm transition-all hover:border-[var(--accent)] hover:shadow-xl"
+                className="h-full rounded-3xl border border-border bg-card p-8 shadow-sm transition-all hover:border-[#0284C7] hover:shadow-xl dark:hover:border-[#38BDF8]"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--accent)]/10 text-[var(--accent)]">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0284C7]/10 dark:bg-[#38BDF8]/15 text-[#0284C7] dark:text-[#38BDF8]">
                   <Target className="h-5 w-5" />
                 </div>
                 <h3 className="mt-4 font-heading text-xl font-bold text-foreground">{b.title}</h3>
@@ -102,10 +104,11 @@ export default function AboutPage() {
 
       <PageSection>
         <Reveal className="mb-14 max-w-2xl">
-          <span className="text-[0.78rem] font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-3">
+            <Compass className="h-3.5 w-3.5" />
             Why Clients Choose ISD
-          </span>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-5xl">
+          </div>
+          <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">
             Built for organizations that need more than a vendor
           </h2>
         </Reveal>
@@ -116,10 +119,10 @@ export default function AboutPage() {
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="h-full rounded-2xl border border-border bg-card p-7 shadow-sm transition-all hover:border-[var(--accent)]/50 hover:shadow-md"
+                className="h-full rounded-3xl border border-border bg-card p-7 shadow-sm transition-all hover:border-[#0284C7]/50 hover:shadow-md"
               >
-                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[var(--accent)]/10 text-[var(--accent)]">
-                  <Compass className="h-4 w-4" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0284C7]/10 dark:bg-[#38BDF8]/15 text-[#0284C7] dark:text-[#38BDF8]">
+                  <Compass className="h-5 w-5" />
                 </div>
                 <h3 className="mt-4 font-heading text-lg font-bold text-foreground">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
@@ -133,10 +136,11 @@ export default function AboutPage() {
         <div className="grid gap-12 lg:grid-cols-[6fr_6fr] lg:items-center">
           <div>
             <Reveal className="max-w-xl">
-              <span className="text-[0.78rem] font-semibold uppercase tracking-[0.12em] text-[var(--accent)]">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-3">
+                <Users className="h-3.5 w-3.5" />
                 Our Team
-              </span>
-              <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-5xl">
+              </div>
+              <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">
                 Strategic thinking meets delivery discipline
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -148,23 +152,23 @@ export default function AboutPage() {
               {teamStats.map((stat, i) => (
                 <Reveal key={i} delay={i * 0.08}>
                   <div className="rounded-2xl border border-border bg-card p-4 shadow-sm text-center">
-                    <div className="font-heading text-3xl font-extrabold text-[var(--accent)] md:text-4xl">{stat.num}</div>
-                    <div className="mt-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">{stat.label}</div>
+                    <div className="font-heading text-3xl font-extrabold text-[#0284C7] dark:text-[#38BDF8] md:text-4xl">{stat.num}</div>
+                    <div className="mt-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">{stat.label}</div>
                   </div>
                 </Reveal>
               ))}
             </div>
           </div>
 
-          <div className="rounded-3xl border border-border bg-card p-8 shadow-sm">
+          <div className="rounded-3xl border border-border bg-card p-8 shadow-xl">
             <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4">
               Integrated Capabilities Roster
             </h3>
             <ul className="space-y-3.5">
               {teamRoles.map((role, i) => (
                 <Reveal key={i} delay={i * 0.05}>
-                  <li className="flex items-start gap-3 rounded-xl border border-border/60 bg-muted/30 p-3.5 text-sm font-medium text-foreground">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" />
+                  <li className="flex items-start gap-3 rounded-2xl border border-border/80 bg-muted/40 p-4 text-sm font-semibold text-foreground">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#0284C7] dark:text-[#38BDF8]" />
                     <span>{role}</span>
                   </li>
                 </Reveal>
@@ -183,3 +187,4 @@ export default function AboutPage() {
     </PageShell>
   );
 }
+
