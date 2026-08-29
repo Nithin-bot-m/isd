@@ -62,9 +62,8 @@ export default function ContactPage() {
       setStatus('success');
     } catch (err: any) {
       console.error('Submission error:', err);
-      // Fallback: Still show success with reference so client isn't blocked, with a direct mail action
-      setForm((prev) => ({ ...prev, _ref: generatedRef }));
-      setStatus('success');
+      setErrorMessage(err?.message || 'Failed to submit inquiry. Please try again or reach out directly.');
+      setStatus('error');
     }
   };
 
@@ -238,6 +237,12 @@ export default function ContactPage() {
                         <option value="exploring">Just exploring options / Request Audit</option>
                       </select>
                     </Field>
+
+                    {status === 'error' && (
+                      <div className="rounded-xl border border-red-500/30 bg-red-500/10 p-4 text-xs font-semibold text-red-600 dark:text-red-400">
+                        {errorMessage || 'Failed to submit inquiry. Please verify your details or email directly.'}
+                      </div>
+                    )}
 
                     <button
                       type="submit"
