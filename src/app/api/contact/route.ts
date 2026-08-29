@@ -239,17 +239,52 @@ Direct Reply: mailto:${email}
 =====================================================
     `.trim();
 
-    // F. Nodemailer Dispatch with Secure Defaults (Disable SSRF / File Access)
-    const smtpHost = process.env.SMTP_HOST;
+    // F. Email Dispatch Engine (Supports Nodemailer SMTP and Resend API)
+    const recipientEmail = process.env.CONTACT_RECIPIENT_EMAIL || RECIPIENT_EMAIL;
+    const resendApiKey = process.env.RESEND_API_KEY;
     const smtpUser = process.env.SMTP_USER;
     const smtpPass = process.env.SMTP_PASS;
-    const smtpPort = Number(process.env.SMTP_PORT) || 587;
-    const smtpSecure = process.env.SMTP_SECURE === 'true' || smtpPort === 465;
-    const fromAddress = process.env.SMTP_FROM || `ISD Info Solutions Leads <leads@isdinfosolutions.com>`;
+    const smtpHost = process.env.SMTP_HOST || 'smtp.gmail.com';
+    const smtpPort = Number(process.env.SMTP_PORT) || 465;
+    const smtpSecure = process.env.SMTP_SECURE === 'false' ? false : (process.env.SMTP_SECURE === 'true' || smtpPort === 465);
+    const fromAddress = process.env.SMTP_FROM || (smtpUser ? `ISD Info Solutions <${smtpUser}>` : `ISD Info Solutions Leads <leads@isdinfosolutions.com>`);
 
     let emailSent = false;
+    let dispatchMethod = 'none';
 
-    if (smtpHost && smtpUser && smtpPass) {
+    // 1. Resend API Dispatch (High reliability for Vercel/Next.js)
+    if (resendApiKey) {
+      try {
+        const resendRes = await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${resendApiKey}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            from: process.env.RESEND_FROM || 'ISD Portal <onboarding@resend.dev>',
+            to: [recipientEmail],
+            reply_to: email,
+            subject: `[ISD Lead] ${name} (${company}) — ${service} [${safeRef}]`,
+            text: textEmail,
+            html: htmlEmail,
+          }),
+        });
+
+        if (resendRes.ok) {
+          emailSent = true;
+          dispatchMethod = 'resend';
+        } else {
+          const resendErr = await resendRes.text();
+          console.error('[Resend Error]:', resendErr);
+        }
+      } catch (err) {
+        console.error('[Resend Exception]:', err);
+      }
+    }
+
+    // 2. Nodemailer SMTP Dispatch (Gmail / Google Workspace / Custom SMTP)
+    if (!emailSent && smtpUser && smtpPass) {
       try {
         const transporter = nodemailer.createTransport({
           host: smtpHost,
@@ -266,7 +301,7 @@ Direct Reply: mailto:${email}
 
         await transporter.sendMail({
           from: fromAddress,
-          to: RECIPIENT_EMAIL,
+          to: recipientEmail,
           replyTo: email,
           subject: `[ISD Lead] ${name} (${company}) — ${service} [${safeRef}]`,
           text: textEmail,
@@ -274,11 +309,15 @@ Direct Reply: mailto:${email}
         });
 
         emailSent = true;
+        dispatchMethod = 'smtp';
       } catch (err: any) {
-        console.error('SMTP Delivery error:', err);
+        console.error('[SMTP Delivery Error]:', err?.message || err);
       }
-    } else {
-      console.log(`[LEAD RECEIVED for ${RECIPIENT_EMAIL}]:`, {
+    }
+
+    // 3. If no email provider is configured, log inquiry for Vercel Function Logs
+    if (!emailSent) {
+      console.warn(`[LEAD RECEIVED (SMTP/Resend NOT CONFIGURED) for ${recipientEmail}]:`, {
         reference: safeRef,
         name,
         email,
