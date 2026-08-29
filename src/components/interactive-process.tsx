@@ -117,8 +117,8 @@ export function InteractiveProcess() {
   const activeStep = detailedSteps[activeIdx];
 
   return (
-    <section id="process" className="relative overflow-hidden py-24 md:py-32 bg-background">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="process" className="relative overflow-hidden py-20 sm:py-24 md:py-32 bg-background w-full max-w-full">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mx-auto mb-16 max-w-3xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-3">
             <Sparkles className="h-3.5 w-3.5" />

@@ -462,9 +462,9 @@ export const valueWords = ['Visibility', 'Engagement', 'Automation', 'Scale'];
 
 export const footerServiceLinks = [
   { label: 'Digital Growth Engineering™', href: '/services/digital-marketing' },
+  { label: 'Enterprise Solution Engineering™', href: '/services/enterprise-solutions' },
   { label: 'Education Ecosystem Engineering™', href: '/services/education-marketing' },
   { label: 'Salesforce & Copado DevOps', href: '/services/salesforce-devops' },
-  { label: 'Search & AI Visibility (SEO, AEO, GEO)', href: '/services/seo' },
 ];
 
 export const footerCompanyLinks = [

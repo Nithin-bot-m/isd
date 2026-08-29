@@ -49,9 +49,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={plusJakarta.variable}>
+    <html lang="en" suppressHydrationWarning className={`${plusJakarta.variable} overflow-x-hidden w-full max-w-full`}>
       <body
-        className="antialiased bg-background text-foreground"
+        className="antialiased bg-background text-foreground overflow-x-hidden w-full max-w-full relative"
       >
         <ThemeProvider
           attribute="class"

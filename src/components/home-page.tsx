@@ -51,9 +51,9 @@ import {
 
 export function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground">
+    <div className="flex min-h-screen flex-col bg-background text-foreground w-full max-w-full overflow-x-hidden">
       <Header />
-      <main className="flex-1" id="main-content">
+      <main className="flex-1 w-full max-w-full overflow-x-hidden" id="main-content">
         <HeroSection />
         <TrustBar />
         <ServicesSection />
@@ -177,16 +177,16 @@ function HeroSection() {
 /* ============================ TRUST BAR ============================ */
 function TrustBar() {
   return (
-    <section id="trust" className="relative -mt-px bg-card py-12 md:py-16 border-b border-border/80">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+    <section id="trust" className="relative -mt-px bg-card py-10 sm:py-12 md:py-16 border-b border-border/80 overflow-hidden w-full max-w-full">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
           {trustStats.map((stat, i) => (
             <Reveal key={i} delay={i * 0.08}>
-              <div className="glass-card flex h-full flex-col items-center justify-center rounded-2xl p-6 text-center">
-                <div className="font-heading text-4xl font-extrabold tracking-tight text-[#0284C7] dark:text-[#38BDF8] md:text-5xl">
+              <div className="glass-card flex h-full flex-col items-center justify-center rounded-2xl p-4 sm:p-6 text-center">
+                <div className="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0284C7] dark:text-[#38BDF8] md:text-5xl">
                   {stat.num}
                 </div>
-                <div className="mt-2 text-xs font-bold uppercase tracking-wider text-muted-foreground md:text-sm">
+                <div className="mt-2 text-[0.72rem] sm:text-xs font-bold uppercase tracking-wider text-muted-foreground md:text-sm">
                   {stat.label}
                 </div>
               </div>
@@ -201,8 +201,8 @@ function TrustBar() {
 /* ============================ SERVICES ============================ */
 function ServicesSection() {
   return (
-    <section id="services" className="py-24 md:py-32 bg-background relative">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="services" className="py-20 sm:py-24 md:py-32 bg-background relative overflow-hidden w-full max-w-full">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-14 max-w-2xl">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-3">
             <Sparkle className="h-3.5 w-3.5" />
@@ -296,11 +296,11 @@ function ServiceCard({
 /* ============================ WHY ISD (DARK MESH) ============================ */
 function WhyIsdSection() {
   return (
-    <section id="why" className="relative overflow-hidden bg-[#0A0F1D] py-24 text-white md:py-32">
+    <section id="why" className="relative overflow-hidden bg-[#0A0F1D] py-20 sm:py-24 text-white md:py-32 w-full max-w-full">
       <div className="mesh-bg absolute inset-0 opacity-80" aria-hidden />
       <div className="grid-overlay absolute inset-0 opacity-15" aria-hidden />
       
-      <div className="relative mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[5fr_7fr] lg:items-center lg:px-8">
+      <div className="relative mx-auto grid max-w-7xl gap-10 sm:gap-12 px-4 sm:px-6 lg:grid-cols-[5fr_7fr] lg:items-center lg:px-8">
         <Reveal direction="up">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-sky-400 mb-3 backdrop-blur-md">
             <Sparkles className="h-3.5 w-3.5" />
@@ -356,12 +356,12 @@ function GlassCard({ item, index }: { item: (typeof whyIsdPoints)[number]; index
 /* ============================ VALUE BAND ============================ */
 function ValueBand() {
   return (
-    <section className="bg-gradient-to-r from-[#0284C7] via-[#6366F1] to-[#0284C7] py-10 shadow-xl overflow-hidden relative">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-8 px-6 lg:px-8">
+    <section className="bg-gradient-to-r from-[#0284C7] via-[#6366F1] to-[#0284C7] py-8 sm:py-10 shadow-xl overflow-hidden relative w-full max-w-full">
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8">
         {valueWords.map((word, i) => (
           <React.Fragment key={word}>
             <motion.span
-              className="font-heading text-2xl font-extrabold tracking-tight text-white md:text-4xl drop-shadow-md"
+              className="font-heading text-xl sm:text-2xl font-extrabold tracking-tight text-white md:text-4xl drop-shadow-md"
               animate={{ y: [0, -4, 0] }}
               transition={{
                 duration: 3.5,
@@ -396,8 +396,8 @@ function FilterableWorkSection() {
         );
 
   return (
-    <section id="work" className="bg-muted/30 py-24 md:py-32 relative">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="work" className="bg-muted/30 py-20 sm:py-24 md:py-32 relative overflow-hidden w-full max-w-full">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end mb-14">
           <Reveal className="max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-3">
@@ -541,11 +541,11 @@ function IndustriesSection() {
   const icons = [GraduationCap, Cpu, Building2, HeartPulse];
 
   return (
-    <section id="industries" className="relative overflow-hidden bg-[#0A0F1D] py-24 text-white md:py-32">
+    <section id="industries" className="relative overflow-hidden bg-[#0A0F1D] py-20 sm:py-24 text-white md:py-32 w-full max-w-full">
       <div className="mesh-bg absolute inset-0 opacity-80" aria-hidden />
       <div className="grid-overlay absolute inset-0 opacity-15" aria-hidden />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-14 max-w-2xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-sky-400 mb-3 backdrop-blur-md">
             <Building2 className="h-3.5 w-3.5" />
@@ -595,8 +595,8 @@ function IndustriesSection() {
 /* ============================ INSIGHTS ============================ */
 function InsightsSection() {
   return (
-    <section id="blog" className="py-24 md:py-32 bg-background relative">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="blog" className="py-20 sm:py-24 md:py-32 bg-background relative overflow-hidden w-full max-w-full">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-14 max-w-2xl">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-3">
             <Sparkles className="h-3.5 w-3.5" />
@@ -607,7 +607,7 @@ function InsightsSection() {
           </h2>
         </Reveal>
 
-        <div className="grid gap-7 md:grid-cols-3">
+        <div className="grid gap-6 sm:gap-7 md:grid-cols-3">
           {insights.map((post, i) => (
             <Reveal key={post.id} delay={i * 0.1}>
               <InsightCard post={post} index={i} />
@@ -685,8 +685,8 @@ function InsightCard({
 /* ============================ FAQ ============================ */
 function FaqSection() {
   return (
-    <section id="faq" className="py-24 md:py-32 bg-muted/30">
-      <div className="mx-auto max-w-3xl px-6 lg:px-8">
+    <section id="faq" className="py-20 sm:py-24 md:py-32 bg-muted/30 overflow-hidden w-full max-w-full">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-12 text-center">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-3">
             FAQ
@@ -704,10 +704,10 @@ function FaqSection() {
                 value={`item-${i}`}
                 className="overflow-hidden rounded-2xl border border-border bg-card transition-all duration-200 data-[state=open]:border-[#0284C7] dark:data-[state=open]:border-[#38BDF8] data-[state=open]:shadow-md"
               >
-                <AccordionTrigger className="px-6 py-4.5 text-left font-heading text-base font-bold hover:no-underline hover:text-[#0284C7] dark:hover:text-[#38BDF8]">
+                <AccordionTrigger className="px-5 sm:px-6 py-4 sm:py-4.5 text-left font-heading text-sm sm:text-base font-bold hover:no-underline hover:text-[#0284C7] dark:hover:text-[#38BDF8]">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6 text-sm leading-relaxed text-muted-foreground">
+                <AccordionContent className="px-5 sm:px-6 pb-5 sm:pb-6 text-sm leading-relaxed text-muted-foreground">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>
@@ -745,13 +745,13 @@ function InteractiveCtaSection() {
   };
 
   return (
-    <section id="cta" className="relative overflow-hidden bg-[#0A0F1D] py-24 text-white md:py-32">
+    <section id="cta" className="relative overflow-hidden bg-[#0A0F1D] py-20 sm:py-24 text-white md:py-32 w-full max-w-full">
       <div className="mesh-bg absolute inset-0 opacity-90" aria-hidden />
       <div className="grid-overlay absolute inset-0 opacity-15" aria-hidden />
 
-      <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
+      <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-white/[0.05] p-8 backdrop-blur-2xl shadow-2xl md:p-14">
+          <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-white/[0.05] p-6 sm:p-8 backdrop-blur-2xl shadow-2xl md:p-14">
             <div className="absolute left-0 right-0 top-0 h-1.5 bg-gradient-to-r from-sky-400 via-indigo-400 to-amber-400" />
 
             <AnimatePresence mode="wait">

@@ -34,11 +34,11 @@ export function PageShell({
   eyebrow,
 }: PageShellProps) {
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground">
+    <div className="flex min-h-screen flex-col bg-background text-foreground w-full max-w-full overflow-x-hidden">
       <Header />
-      <main className="flex-1" id="main-content">
+      <main className="flex-1 w-full max-w-full overflow-x-hidden" id="main-content">
         {/* Sub-page Hero with Homepage-grade ambient visuals */}
-        <section className="relative overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-44 md:pb-28 bg-[#0A0F1D] text-white">
+        <section className="relative overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-44 md:pb-28 bg-[#0A0F1D] text-white w-full max-w-full">
           {/* Dynamic atmospheric mesh background */}
           <div className="mesh-bg absolute inset-0 opacity-80" aria-hidden />
           
@@ -118,7 +118,7 @@ export function PageSection({
       : 'bg-background';
 
   return (
-    <section className={`py-14 sm:py-20 md:py-28 relative ${bg} ${className}`}>
+    <section className={`py-14 sm:py-20 md:py-28 relative overflow-hidden w-full max-w-full ${bg} ${className}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{children}</div>
     </section>
   );

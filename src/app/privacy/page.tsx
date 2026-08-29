@@ -36,7 +36,7 @@ export default function PrivacyPage() {
               <section>
                 <h2 className="font-heading text-xl font-bold text-foreground">4. Contact Information</h2>
                 <p className="mt-2">
-                  If you have any questions about this Privacy Policy, please contact our compliance team at <a href="mailto:sudhanvaev@isdinfosolutions.com" className="text-[var(--accent)] font-semibold hover:underline">sudhanvaev@isdinfosolutions.com</a> or call <a href="tel:+919164416665" className="text-[var(--accent)] font-semibold hover:underline">+91 91644 16665</a>.
+                  If you have any questions about this Privacy Policy, please contact our compliance team at <a href="mailto:sudhanvaev@isdinfosolutions.com" className="text-[var(--accent)] font-semibold hover:underline">sudhanvaev@isdinfosolutions.com</a> or call <a href="tel:+916361120944" className="text-[var(--accent)] font-semibold hover:underline">+91 63611 20944</a>.
                 </p>
               </section>
             </div>

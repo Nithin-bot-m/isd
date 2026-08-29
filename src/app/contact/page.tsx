@@ -115,13 +115,13 @@ export default function ContactPage() {
 
                     <div className="mt-6 flex flex-col sm:flex-row gap-3">
                       <a
-                        href={`https://wa.me/919164416665?text=Hello%20ISD%20Team%2C%20I%20just%20submitted%20inquiry%20%5B${form._ref}%5D%20regarding%20${encodeURIComponent(form.service || 'growth%20solutions')}.`}
+                        href={`https://wa.me/916361120944?text=Hello%20ISD%20Team%2C%20I%20just%20submitted%20inquiry%20%5B${form._ref}%5D%20regarding%20${encodeURIComponent(form.service || 'growth%20solutions')}.`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-5 py-2.5 text-xs font-bold text-white shadow-md hover:bg-emerald-700 transition-colors"
                       >
                         <Phone className="h-3.5 w-3.5" />
-                        WhatsApp Support (+91 91644 16665)
+                        WhatsApp Support (+91 63611 20944)
                       </a>
                       <a
                         href={`mailto:sudhanvaev@isdinfosolutions.com?subject=Project%20Brief%20%5B${form._ref}%5D%20-%20${encodeURIComponent(form.name)}&body=Tracking%20Ref:%20${form._ref}%0D%0ACompany:%20${encodeURIComponent(form.company)}%0D%0AService:%20${encodeURIComponent(form.service)}`}
@@ -181,7 +181,7 @@ export default function ContactPage() {
                           type="tel"
                           value={form.phone}
                           onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                          placeholder="+91 91644 16665"
+                          placeholder="+91 63611 20944"
                           className="h-12 w-full rounded-xl border border-border bg-muted/40 px-4 text-sm font-medium text-foreground placeholder:text-muted-foreground/50 focus:border-[#0284C7] focus:bg-card focus:outline-none focus:ring-2 focus:ring-[#0284C7]/20"
                         />
                       </Field>
@@ -282,7 +282,7 @@ export default function ContactPage() {
                     </div>
                   </a>
                   <a
-                    href="tel:+919164416665"
+                    href="tel:+916361120944"
                     className="flex items-center gap-3 text-slate-300 transition-colors hover:text-white group"
                   >
                     <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white/10 text-sky-400 group-hover:bg-[#0284C7] group-hover:text-white transition-colors">
@@ -290,7 +290,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-xs text-slate-400">Direct Hotline / WhatsApp</div>
-                      <span className="font-semibold text-white">+91 91644 16665</span>
+                      <span className="font-semibold text-white">+91 63611 20944</span>
                     </div>
                   </a>
                 </div>

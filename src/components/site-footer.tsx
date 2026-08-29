@@ -5,7 +5,7 @@ import { ShieldCheck, Mail, Phone, ArrowUpRight } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="mt-auto bg-[#0A0F1D] text-white relative overflow-hidden border-t border-white/10">
+    <footer className="mt-auto bg-[#0A0F1D] text-white relative overflow-hidden border-t border-white/10 w-full max-w-full">
       {/* Subtle atmospheric glow */}
       <div className="absolute -bottom-40 right-1/4 h-80 w-80 rounded-full bg-[#0284C7]/10 blur-[120px] pointer-events-none" />
       <div className="grid-overlay absolute inset-0 opacity-10 pointer-events-none" />
@@ -57,11 +57,11 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+919164416665"
+                  href="tel:+916361120944"
                   className="inline-flex items-center gap-2 text-sm text-slate-300 transition-all hover:translate-x-0.5 hover:text-white"
                 >
                   <Phone className="h-4 w-4 text-sky-400 shrink-0" />
-                  +91 91644 16665
+                  +91 63611 20944
                 </a>
               </li>
             </ul>
