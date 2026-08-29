@@ -75,10 +75,10 @@ export default function ContactPage() {
       intro="Tell us about your project, your goals, and your timeline. All submissions are routed directly to executive leadership at sudhanvaev@isdinfosolutions.com."
     >
       <PageSection>
-        <div className="grid gap-12 lg:grid-cols-[7fr_5fr]">
+        <div className="grid gap-10 lg:grid-cols-[7fr_5fr]">
           {/* Form */}
           <Reveal>
-            <div className="rounded-3xl border border-border bg-card p-6 sm:p-8 md:p-10 shadow-xl">
+            <div className="rounded-3xl border border-border bg-card p-5 sm:p-8 md:p-10 shadow-xl w-full max-w-full overflow-hidden">
               <div className="border-b border-border/80 pb-5">
                 <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-2">
                   <Sparkles className="h-3.5 w-3.5" />
@@ -262,12 +262,12 @@ export default function ContactPage() {
           {/* Sidebar */}
           <Reveal delay={0.1}>
             <div className="space-y-6">
-              <div className="rounded-3xl bg-[#0A0F1D] p-6 sm:p-8 text-white shadow-xl border border-white/10 relative overflow-hidden">
+              <div className="rounded-3xl bg-[#0A0F1D] p-5 sm:p-8 text-white shadow-xl border border-white/10 relative overflow-hidden w-full max-w-full">
                 <div className="absolute -bottom-20 -right-20 h-40 w-40 rounded-full bg-[#0284C7]/20 blur-3xl pointer-events-none" />
                 <span className="text-xs font-bold uppercase tracking-wider text-sky-400">
                   Direct Inquiries
                 </span>
-                <h3 className="mt-2 font-heading text-2xl font-bold">Contact Directly</h3>
+                <h3 className="mt-2 font-heading text-xl sm:text-2xl font-bold">Contact Directly</h3>
                 <div className="mt-6 space-y-4 text-sm">
                   <a
                     href="mailto:sudhanvaev@isdinfosolutions.com"
@@ -276,9 +276,9 @@ export default function ContactPage() {
                     <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white/10 text-sky-400 group-hover:bg-[#0284C7] group-hover:text-white transition-colors">
                       <Mail className="h-5 w-5" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <div className="text-xs text-slate-400">Executive Email</div>
-                      <span className="font-semibold text-white">sudhanvaev@isdinfosolutions.com</span>
+                      <span className="font-semibold text-white break-all">sudhanvaev@isdinfosolutions.com</span>
                     </div>
                   </a>
                   <a
@@ -288,7 +288,7 @@ export default function ContactPage() {
                     <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white/10 text-sky-400 group-hover:bg-[#0284C7] group-hover:text-white transition-colors">
                       <Phone className="h-5 w-5" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <div className="text-xs text-slate-400">Direct Hotline / WhatsApp</div>
                       <span className="font-semibold text-white">+91 63611 20944</span>
                     </div>
@@ -296,14 +296,14 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="rounded-3xl border border-border bg-card p-6 sm:p-8 shadow-sm">
+              <div className="rounded-3xl border border-border bg-card p-5 sm:p-8 shadow-sm w-full max-w-full overflow-hidden">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8]">
                   Engagements
                 </span>
-                <h3 className="mt-1 font-heading text-xl font-bold text-foreground">Why Reach Out</h3>
-                <ul className="mt-5 space-y-4">
+                <h3 className="mt-1 font-heading text-lg sm:text-xl font-bold text-foreground">Why Reach Out</h3>
+                <ul className="mt-5 space-y-3 sm:space-y-4">
                   {whyReachOut.map((item) => (
-                    <li key={item.title} className="rounded-2xl bg-muted/40 p-4 border border-border/60">
+                    <li key={item.title} className="rounded-2xl bg-muted/40 p-3.5 sm:p-4 border border-border/60">
                       <div className="font-heading text-sm font-bold text-foreground">{item.title}</div>
                       <p className="mt-1 text-xs text-muted-foreground">{item.desc}</p>
                     </li>
@@ -311,7 +311,7 @@ export default function ContactPage() {
                 </ul>
               </div>
 
-              <div className="rounded-3xl border border-border bg-card p-6 sm:p-8 shadow-sm">
+              <div className="rounded-3xl border border-border bg-card p-5 sm:p-8 shadow-sm w-full max-w-full overflow-hidden">
                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
                   <Clock className="h-4 w-4 text-[#0284C7] dark:text-[#38BDF8]" />
                   Response SLA

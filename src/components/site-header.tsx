@@ -107,11 +107,11 @@ export function Header() {
   }, [pathname]);
 
   return (
-    <header className="fixed inset-x-0 top-3 sm:top-5 z-[90] pointer-events-none px-3 sm:px-6 lg:px-8 transition-all duration-300">
+    <header className="fixed inset-x-0 top-2.5 sm:top-5 z-[90] pointer-events-none px-2.5 sm:px-6 lg:px-8 transition-all duration-300 w-full max-w-full">
       {/* Floating Island Stadium / Pill Container */}
       <nav
         className={cn(
-          'pointer-events-auto mx-auto flex max-w-7xl items-center justify-between gap-3 sm:gap-6 rounded-full border border-border/80 bg-white/90 dark:bg-[#0B1120]/90 px-3.5 sm:px-6 py-2 sm:py-2.5 shadow-xl backdrop-blur-2xl ring-1 ring-black/5 dark:ring-white/10 transition-all duration-300',
+          'pointer-events-auto mx-auto flex max-w-7xl items-center justify-between gap-2 sm:gap-6 rounded-full border border-border/80 bg-white/90 dark:bg-[#0B1120]/90 px-3 sm:px-6 py-2 sm:py-2.5 shadow-xl backdrop-blur-2xl ring-1 ring-black/5 dark:ring-white/10 transition-all duration-300 w-full',
           scrolled
             ? 'shadow-2xl shadow-black/10 dark:shadow-black/60 border-[#0284C7]/20 py-2 sm:py-2.5 scale-[0.99]'
             : 'shadow-lg shadow-black/5 dark:shadow-black/30'

@@ -242,7 +242,7 @@ function ServiceCard({
     <motion.article
       whileHover={{ y: -6 }}
       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-border bg-card p-8 shadow-sm transition-all duration-300 hover:border-[#0284C7]/40 dark:hover:border-[#38BDF8]/40 hover:shadow-2xl hover:shadow-[#0284C7]/10"
+      className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-border bg-card p-5 sm:p-8 shadow-sm transition-all duration-300 hover:border-[#0284C7]/40 dark:hover:border-[#38BDF8]/40 hover:shadow-2xl hover:shadow-[#0284C7]/10 w-full max-w-full"
     >
       {/* Top accent light bar on hover */}
       <div
@@ -476,7 +476,7 @@ function CaseStudyCard({
       exit={{ opacity: 0, y: 15 }}
       transition={{ duration: 0.35 }}
       whileHover={{ y: -4 }}
-      className="group grid gap-8 rounded-3xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:border-[#0284C7]/40 dark:hover:border-[#38BDF8]/40 hover:shadow-xl md:grid-cols-[1fr_2fr] md:p-8"
+      className="group grid gap-6 sm:gap-8 rounded-3xl border border-border bg-card p-5 sm:p-8 shadow-sm transition-all duration-300 hover:border-[#0284C7]/40 dark:hover:border-[#38BDF8]/40 hover:shadow-xl md:grid-cols-[1fr_2fr] w-full max-w-full overflow-hidden"
     >
       <div
         className={`relative aspect-[16/10] overflow-hidden rounded-2xl bg-gradient-to-br ${

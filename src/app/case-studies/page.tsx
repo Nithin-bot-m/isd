@@ -114,7 +114,7 @@ function CaseStudyCard({
       exit={{ opacity: 0, y: 15 }}
       whileHover={{ y: -4 }}
       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-      className="group grid gap-8 rounded-3xl border border-border bg-card p-8 shadow-sm transition-all hover:border-[#0284C7] hover:shadow-2xl md:grid-cols-[1fr_2fr] md:p-10"
+      className="group grid gap-6 sm:gap-8 rounded-3xl border border-border bg-card p-5 sm:p-8 shadow-sm transition-all hover:border-[#0284C7] hover:shadow-2xl md:grid-cols-[1fr_2fr] md:p-10 w-full max-w-full overflow-hidden"
     >
       <div
         className={`relative aspect-[16/10] overflow-hidden rounded-2xl bg-gradient-to-br ${

@@ -89,13 +89,13 @@ export default function AboutPage() {
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="h-full rounded-3xl border border-border bg-card p-8 shadow-sm transition-all hover:border-[#0284C7] hover:shadow-xl dark:hover:border-[#38BDF8]"
+                className="h-full rounded-3xl border border-border bg-card p-5 sm:p-8 shadow-sm transition-all hover:border-[#0284C7] hover:shadow-xl dark:hover:border-[#38BDF8] w-full max-w-full overflow-hidden"
               >
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0284C7]/10 dark:bg-[#38BDF8]/15 text-[#0284C7] dark:text-[#38BDF8]">
                   <Target className="h-5 w-5" />
                 </div>
-                <h3 className="mt-4 font-heading text-xl font-bold text-foreground">{b.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{b.desc}</p>
+                <h3 className="mt-4 font-heading text-lg sm:text-xl font-bold text-foreground">{b.title}</h3>
+                <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">{b.desc}</p>
               </motion.div>
             </Reveal>
           ))}
@@ -119,7 +119,7 @@ export default function AboutPage() {
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="h-full rounded-3xl border border-border bg-card p-7 shadow-sm transition-all hover:border-[#0284C7]/50 hover:shadow-md"
+                className="h-full rounded-3xl border border-border bg-card p-5 sm:p-7 shadow-sm transition-all hover:border-[#0284C7]/50 hover:shadow-md w-full max-w-full overflow-hidden"
               >
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0284C7]/10 dark:bg-[#38BDF8]/15 text-[#0284C7] dark:text-[#38BDF8]">
                   <Compass className="h-5 w-5" />
@@ -133,7 +133,7 @@ export default function AboutPage() {
       </PageSection>
 
       <PageSection variant="mist">
-        <div className="grid gap-12 lg:grid-cols-[6fr_6fr] lg:items-center">
+        <div className="grid gap-10 sm:gap-12 lg:grid-cols-[6fr_6fr] lg:items-center">
           <div>
             <Reveal className="max-w-xl">
               <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-3">
@@ -143,31 +143,31 @@ export default function AboutPage() {
               <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">
                 Strategic thinking meets delivery discipline
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+              <p className="mt-4 text-sm sm:text-base leading-relaxed text-muted-foreground md:text-lg">
                 Our team combines strategic thinking, technical expertise, and delivery discipline. From senior strategists and platform architects to campaign operators and CRM engineers, every member of the ISD team is focused on one thing: making your growth systems work.
               </p>
             </Reveal>
 
-            <div className="mt-8 grid grid-cols-3 gap-4 max-w-lg">
+            <div className="mt-8 grid grid-cols-3 gap-3 sm:gap-4 max-w-lg">
               {teamStats.map((stat, i) => (
                 <Reveal key={i} delay={i * 0.08}>
-                  <div className="rounded-2xl border border-border bg-card p-4 shadow-sm text-center">
-                    <div className="font-heading text-3xl font-extrabold text-[#0284C7] dark:text-[#38BDF8] md:text-4xl">{stat.num}</div>
-                    <div className="mt-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">{stat.label}</div>
+                  <div className="rounded-2xl border border-border bg-card p-3.5 sm:p-4 shadow-sm text-center">
+                    <div className="font-heading text-2xl sm:text-3xl font-extrabold text-[#0284C7] dark:text-[#38BDF8] md:text-4xl">{stat.num}</div>
+                    <div className="mt-1 text-[0.68rem] sm:text-xs font-bold uppercase tracking-wider text-muted-foreground">{stat.label}</div>
                   </div>
                 </Reveal>
               ))}
             </div>
           </div>
 
-          <div className="rounded-3xl border border-border bg-card p-8 shadow-xl">
+          <div className="rounded-3xl border border-border bg-card p-5 sm:p-8 shadow-xl w-full max-w-full overflow-hidden">
             <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4">
               Integrated Capabilities Roster
             </h3>
-            <ul className="space-y-3.5">
+            <ul className="space-y-3">
               {teamRoles.map((role, i) => (
                 <Reveal key={i} delay={i * 0.05}>
-                  <li className="flex items-start gap-3 rounded-2xl border border-border/80 bg-muted/40 p-4 text-sm font-semibold text-foreground">
+                  <li className="flex items-start gap-3 rounded-2xl border border-border/80 bg-muted/40 p-3.5 sm:p-4 text-xs sm:text-sm font-semibold text-foreground">
                     <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#0284C7] dark:text-[#38BDF8]" />
                     <span>{role}</span>
                   </li>

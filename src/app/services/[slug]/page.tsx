@@ -843,7 +843,7 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
                 <motion.div
                   whileHover={{ y: -5 }}
                   transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                  className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-border bg-card p-6 sm:p-7 shadow-sm transition-all hover:border-[#0284C7] hover:shadow-xl dark:hover:border-[#38BDF8]"
+                  className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-border bg-card p-5 sm:p-7 shadow-sm transition-all hover:border-[#0284C7] hover:shadow-xl dark:hover:border-[#38BDF8] w-full max-w-full"
                 >
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0284C7] via-[#38BDF8] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   <div>
@@ -883,7 +883,7 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
                 <motion.div
                   whileHover={{ y: -5 }}
                   transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                  className="group relative h-full rounded-3xl border border-border bg-card p-6 shadow-sm transition-all hover:border-[#0284C7] hover:shadow-lg dark:hover:border-[#38BDF8]"
+                  className="group relative h-full rounded-3xl border border-border bg-card p-5 sm:p-6 shadow-sm transition-all hover:border-[#0284C7] hover:shadow-lg dark:hover:border-[#38BDF8] w-full max-w-full overflow-hidden"
                 >
                   <div className="font-heading text-3xl font-extrabold text-[#0284C7]/40 dark:text-[#38BDF8]/40 transition-colors group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8]">{step.step}</div>
                   <h3 className="mt-3 font-heading text-base font-bold text-foreground">{step.title}</h3>
@@ -907,8 +907,8 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             {page.results.items.map((r, i) => (
               <Reveal key={i} delay={i * 0.08}>
-                <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-8 shadow-sm border-l-4 border-l-[#0284C7] dark:border-l-[#38BDF8]">
-                  <div className="font-heading text-4xl font-extrabold tracking-tight text-[#0284C7] dark:text-[#38BDF8] md:text-5xl">{r.stat}</div>
+                <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-5 sm:p-8 shadow-sm border-l-4 border-l-[#0284C7] dark:border-l-[#38BDF8] w-full max-w-full">
+                  <div className="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0284C7] dark:text-[#38BDF8] md:text-5xl">{r.stat}</div>
                   <div className="mt-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-muted-foreground">{r.label}</div>
                 </div>
               </Reveal>
@@ -926,10 +926,10 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
             </div>
             <h2 className="text-2xl font-extrabold tracking-tight md:text-4xl text-foreground">Tools & Frameworks We Architect With</h2>
           </Reveal>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2.5 sm:gap-3">
             {page.tech.map((t, i) => (
               <Reveal key={t} delay={i * 0.03}>
-                <span className="rounded-2xl border border-border bg-card px-5 py-3 text-sm font-bold shadow-sm transition-all hover:border-[#0284C7] hover:text-[#0284C7] dark:hover:border-[#38BDF8] dark:hover:text-[#38BDF8] hover:shadow-md">{t}</span>
+                <span className="rounded-2xl border border-border bg-card px-4 py-2.5 sm:px-5 sm:py-3 text-xs sm:text-sm font-bold shadow-sm transition-all hover:border-[#0284C7] hover:text-[#0284C7] dark:hover:border-[#38BDF8] dark:hover:text-[#38BDF8] hover:shadow-md">{t}</span>
               </Reveal>
             ))}
           </div>
@@ -948,9 +948,9 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
           <div className="grid gap-6 md:grid-cols-2">
             {page.inPractice.map((item, i) => (
               <Reveal key={i} delay={i * 0.08}>
-                <div className="rounded-3xl border border-border bg-card p-8 shadow-sm">
-                  <h3 className="font-heading text-xl font-bold text-foreground">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">{item.desc}</p>
+                <div className="rounded-3xl border border-border bg-card p-5 sm:p-8 shadow-sm w-full max-w-full overflow-hidden">
+                  <h3 className="font-heading text-lg sm:text-xl font-bold text-foreground">{item.title}</h3>
+                  <p className="mt-3 text-xs sm:text-sm leading-relaxed text-muted-foreground md:text-base">{item.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -967,21 +967,21 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
             </div>
           </Reveal>
           <Reveal>
-            <div className="rounded-3xl border border-border bg-card p-8 shadow-xl md:p-10">
+            <div className="rounded-3xl border border-border bg-card p-5 sm:p-8 shadow-xl md:p-10 w-full max-w-full overflow-hidden">
               <span className="rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8]">{page.caseStudy.tag}</span>
-              <h3 className="mt-4 font-heading text-2xl font-bold leading-snug md:text-3xl">{page.caseStudy.title}</h3>
-              <div className="mt-6 grid gap-6 sm:grid-cols-3">
-                <div className="rounded-2xl bg-muted/50 p-5">
+              <h3 className="mt-4 font-heading text-xl sm:text-2xl font-bold leading-snug md:text-3xl">{page.caseStudy.title}</h3>
+              <div className="mt-6 grid gap-4 sm:gap-6 sm:grid-cols-3">
+                <div className="rounded-2xl bg-muted/50 p-4 sm:p-5">
                   <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Challenge</h4>
-                  <p className="mt-2 text-sm text-foreground leading-relaxed">{page.caseStudy.challenge}</p>
+                  <p className="mt-2 text-xs sm:text-sm text-foreground leading-relaxed">{page.caseStudy.challenge}</p>
                 </div>
-                <div className="rounded-2xl bg-muted/50 p-5">
+                <div className="rounded-2xl bg-muted/50 p-4 sm:p-5">
                   <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Solution</h4>
-                  <p className="mt-2 text-sm text-foreground leading-relaxed">{page.caseStudy.solution}</p>
+                  <p className="mt-2 text-xs sm:text-sm text-foreground leading-relaxed">{page.caseStudy.solution}</p>
                 </div>
-                <div className="rounded-2xl bg-muted/50 p-5 border-l-4 border-[#0284C7] dark:border-[#38BDF8]">
+                <div className="rounded-2xl bg-muted/50 p-4 sm:p-5 border-l-4 border-[#0284C7] dark:border-[#38BDF8]">
                   <h4 className="text-xs font-bold uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8]">Result</h4>
-                  <p className="mt-2 text-base font-extrabold text-foreground leading-relaxed">{page.caseStudy.result}</p>
+                  <p className="mt-2 text-sm sm:text-base font-extrabold text-foreground leading-relaxed">{page.caseStudy.result}</p>
                 </div>
               </div>
             </div>
@@ -1001,9 +1001,9 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
           <div className="max-w-4xl space-y-4">
             {page.faqs.map((faq) => (
               <Reveal key={faq.q}>
-                <div className="rounded-3xl border border-border bg-card p-6 shadow-sm transition-all hover:border-[#0284C7]/40 hover:shadow-md">
+                <div className="rounded-3xl border border-border bg-card p-5 sm:p-6 shadow-sm transition-all hover:border-[#0284C7]/40 hover:shadow-md w-full max-w-full overflow-hidden">
                   <h4 className="font-heading text-base font-bold text-foreground sm:text-lg">{faq.q}</h4>
-                  <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{faq.a}</p>
+                  <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-muted-foreground">{faq.a}</p>
                 </div>
               </Reveal>
             ))}

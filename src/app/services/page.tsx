@@ -71,7 +71,7 @@ export default function ServicesPage() {
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative flex h-full flex-col justify-between rounded-3xl border border-border bg-card p-7 shadow-sm transition-all hover:border-[#0284C7]/60 hover:shadow-xl dark:hover:border-[#38BDF8]/60"
+                className="group relative flex h-full flex-col justify-between rounded-3xl border border-border bg-card p-5 sm:p-7 shadow-sm transition-all hover:border-[#0284C7]/60 hover:shadow-xl dark:hover:border-[#38BDF8]/60 w-full max-w-full overflow-hidden"
               >
                 <div>
                   <span className="font-heading text-3xl font-extrabold text-[#0284C7]/40 dark:text-[#38BDF8]/40 transition-colors group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8]">
@@ -110,7 +110,7 @@ export default function ServicesPage() {
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="h-full rounded-3xl border border-border bg-card p-6 shadow-sm transition-all hover:border-[#0284C7]/50 hover:shadow-md"
+                className="h-full rounded-3xl border border-border bg-card p-5 sm:p-6 shadow-sm transition-all hover:border-[#0284C7]/50 hover:shadow-md w-full max-w-full overflow-hidden"
               >
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0284C7]/10 text-[#0284C7] dark:bg-[#38BDF8]/15 dark:text-[#38BDF8]">
                   <CheckCircle2 className="h-5 w-5" />
@@ -146,13 +146,13 @@ export default function ServicesPage() {
             <Reveal key={study.id} delay={i * 0.08}>
               <Link
                 href="/case-studies"
-                className="group flex flex-col justify-between rounded-3xl border border-border bg-card p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-[#0284C7] hover:shadow-xl"
+                className="group flex flex-col justify-between rounded-3xl border border-border bg-card p-5 sm:p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-[#0284C7] hover:shadow-xl w-full max-w-full overflow-hidden"
               >
                 <div>
                   <span className="inline-flex items-center rounded-full border border-border bg-muted px-3 py-1 text-xs font-bold text-muted-foreground">
                     {study.tags[0]}
                   </span>
-                  <h3 className="mt-3 font-heading text-2xl font-bold transition-colors group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8]">
+                  <h3 className="mt-3 font-heading text-xl sm:text-2xl font-bold transition-colors group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8]">
                     {study.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -194,7 +194,7 @@ function ServiceCard({
     <motion.article
       whileHover={{ y: -6 }}
       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-border bg-card p-8 transition-all hover:border-[#0284C7] hover:shadow-2xl md:p-10"
+      className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-border bg-card p-5 sm:p-8 md:p-10 transition-all hover:border-[#0284C7] hover:shadow-2xl w-full max-w-full"
     >
       <div
         className="absolute inset-x-0 top-0 h-1.5 origin-left scale-x-0 bg-gradient-to-r from-[#0284C7] via-[#38BDF8] to-[#D97706] transition-transform duration-500 group-hover:scale-x-100"
@@ -202,7 +202,7 @@ function ServiceCard({
       />
       <div>
         <div className="mb-6 flex items-center justify-between">
-          <span className="grid h-12 w-12 place-items-center rounded-2xl bg-[#0284C7]/10 dark:bg-[#38BDF8]/15 font-heading text-lg font-bold text-[#0284C7] dark:text-[#38BDF8] transition-colors group-hover:bg-[#0284C7] group-hover:text-white dark:group-hover:bg-[#38BDF8] dark:group-hover:text-[#030712]">
+          <span className="grid h-11 w-11 sm:h-12 sm:w-12 place-items-center rounded-2xl bg-[#0284C7]/10 dark:bg-[#38BDF8]/15 font-heading text-base sm:text-lg font-bold text-[#0284C7] dark:text-[#38BDF8] transition-colors group-hover:bg-[#0284C7] group-hover:text-white dark:group-hover:bg-[#38BDF8] dark:group-hover:text-[#030712]">
             {String(index + 1).padStart(2, '0')}
           </span>
           <span className="rounded-full border border-border bg-muted px-3 py-1 text-xs font-bold text-muted-foreground">
@@ -210,10 +210,10 @@ function ServiceCard({
           </span>
         </div>
 
-        <h3 className="font-heading text-2xl font-bold tracking-tight transition-colors group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8]">
+        <h3 className="font-heading text-xl sm:text-2xl font-bold tracking-tight transition-colors group-hover:text-[#0284C7] dark:group-hover:text-[#38BDF8]">
           {service.title}
         </h3>
-        <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+        <p className="mt-3 text-sm sm:text-base leading-relaxed text-muted-foreground">
           {service.shortDescription}
         </p>
 

@@ -94,15 +94,15 @@ export default function InsightsPage() {
       {/* Newsletter Section */}
       <PageSection variant="mist">
         <Reveal>
-          <div className="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-border bg-card p-8 text-center shadow-xl md:p-14">
+          <div className="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-border bg-card p-5 sm:p-8 text-center shadow-xl md:p-14 w-full max-w-full">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-3">
               <Mail className="h-3.5 w-3.5" />
               Monthly Growth Dispatch
             </div>
-            <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-4xl">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground md:text-4xl">
               Get insights in your inbox
             </h2>
-            <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
+            <p className="mx-auto mt-3 max-w-xl text-xs sm:text-sm leading-relaxed text-muted-foreground md:text-base">
               Join growth leaders who receive our monthly breakdown of what&apos;s working in digital marketing, AI platforms, and CRM strategy — with actionable frameworks you can deploy immediately.
             </p>
 
@@ -163,7 +163,7 @@ function InsightCard({
       layout
       whileHover={{ y: -4 }}
       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-      className="group flex h-full flex-col justify-between rounded-3xl border border-border bg-card p-6 shadow-sm transition-all hover:border-[#0284C7] hover:shadow-xl"
+      className="group flex h-full flex-col justify-between rounded-3xl border border-border bg-card p-5 sm:p-6 shadow-sm transition-all hover:border-[#0284C7] hover:shadow-xl w-full max-w-full overflow-hidden"
     >
       <div>
         <div className="relative aspect-[16/10] overflow-hidden rounded-2xl shadow-sm">

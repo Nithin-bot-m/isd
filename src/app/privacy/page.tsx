@@ -11,7 +11,7 @@ export default function PrivacyPage() {
       <PageSection>
         <div className="mx-auto max-w-3xl space-y-8 text-base leading-relaxed text-muted-foreground">
           <Reveal>
-            <div className="rounded-3xl border border-border bg-card p-8 md:p-10 space-y-6">
+            <div className="rounded-3xl border border-border bg-card p-5 sm:p-8 md:p-10 space-y-6 w-full max-w-full overflow-hidden">
               <section>
                 <h2 className="font-heading text-xl font-bold text-foreground">1. Information We Collect</h2>
                 <p className="mt-2">

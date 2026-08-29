@@ -203,7 +203,7 @@ export function InteractiveProcess() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-xl md:p-10"
+            className="overflow-hidden rounded-3xl border border-border bg-card p-5 sm:p-8 md:p-10 shadow-xl w-full max-w-full"
           >
             <div className="grid gap-8 lg:grid-cols-[6fr_5fr] lg:gap-12">
               {/* Left Column: Overview & Activities */}
