@@ -48,10 +48,28 @@ export default function InsightsPage() {
         i.category.toLowerCase().includes(active.toLowerCase()) || active === 'All'
       );
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
       setSubscribed(true);
+      try {
+        await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: 'Newsletter Subscriber',
+            email: email,
+            phone: 'Not provided',
+            company: 'Newsletter Subscriber',
+            service: 'Insights Newsletter Subscription',
+            timeline: 'Active Subscriber',
+            summary: `New subscriber opted in for the Monthly Growth Dispatch newsletter: ${email}`,
+            reference: 'ISD-NEWS-' + Math.random().toString(36).substring(2, 6).toUpperCase(),
+          }),
+        });
+      } catch (err) {
+        console.error('Newsletter dispatch error:', err);
+      }
     }
   };
 

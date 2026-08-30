@@ -723,8 +723,10 @@ function FaqSection() {
 function InteractiveCtaSection() {
   const [goal, setGoal] = React.useState<string>('Digital Marketing');
   const [scale, setScale] = React.useState<string>('Immediate (<1 Mo)');
-  const [status, setStatus] = React.useState<'idle' | 'loading' | 'success'>('idle');
+  const [status, setStatus] = React.useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = React.useState('');
   const [form, setForm] = React.useState({ name: '', email: '', message: '' });
+  const [refId, setRefId] = React.useState('');
 
   const goals = [
     'Digital Marketing',
@@ -736,12 +738,44 @@ function InteractiveCtaSection() {
 
   const scales = ['Immediate (<1 Mo)', '1 – 3 Months', 'Exploring Options'];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
-    setTimeout(() => {
+    setErrorMessage('');
+    const generatedRef = 'ISD-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+
+    try {
+      const summaryText = form.message.trim().length >= 5
+        ? form.message.trim()
+        : `Strategy session inquiry for ${goal}. Target timeline: ${scale}.`;
+
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: 'Not provided',
+          company: 'Website Strategy Request',
+          service: goal,
+          timeline: scale,
+          summary: summaryText,
+          reference: generatedRef,
+        }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || 'Failed to dispatch inquiry. Please try again.');
+      }
+
+      setRefId(data.reference || generatedRef);
       setStatus('success');
-    }, 850);
+    } catch (err: any) {
+      console.error('Home CTA submission error:', err);
+      setErrorMessage(err?.message || 'Failed to submit inquiry. Please try again or reach out directly.');
+      setStatus('error');
+    }
   };
 
   return (
@@ -766,16 +800,22 @@ function InteractiveCtaSection() {
                   <div className="mb-6 grid h-16 w-16 place-items-center rounded-2xl bg-[#0284C7] text-white shadow-xl shadow-[#0284C7]/40">
                     <CheckCircle2 className="h-8 w-8" />
                   </div>
-                  <h3 className="font-heading text-3xl font-extrabold text-white">Project Brief Received!</h3>
+                  <h3 className="font-heading text-3xl font-extrabold text-white">Project Brief Dispatched!</h3>
                   <p className="mt-3 max-w-md text-slate-300">
-                    Thank you, {form.name}. A senior growth director specializing in {goal} will contact you within 24 hours with a custom strategy assessment.
+                    Thank you, <strong className="text-white">{form.name}</strong>. Your project brief has been securely routed to executive leadership.
                   </p>
+                  {refId && (
+                    <div className="mt-4 rounded-xl border border-sky-500/30 bg-sky-500/10 px-4 py-2 text-xs font-bold text-sky-300">
+                      Tracking Reference: {refId}
+                    </div>
+                  )}
                   <Button
                     variant="outline"
                     className="mt-8 rounded-xl border-white/25 text-white hover:bg-white hover:text-[#0A0F1D]"
                     onClick={() => {
                       setStatus('idle');
                       setForm({ name: '', email: '', message: '' });
+                      setRefId('');
                     }}
                   >
                     Submit Another Brief
@@ -871,7 +911,6 @@ function InteractiveCtaSection() {
                     </div>
 
                     <textarea
-                      required
                       placeholder="Briefly describe your objectives, existing stack, or challenges..."
                       aria-label="Project brief"
                       rows={3}
@@ -879,6 +918,12 @@ function InteractiveCtaSection() {
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
                       className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-400 focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-400/20 transition-all"
                     />
+
+                    {status === 'error' && (
+                      <div className="rounded-xl border border-red-500/30 bg-red-500/10 p-4 text-xs font-semibold text-red-400">
+                        {errorMessage || 'Failed to submit inquiry. Please try again.'}
+                      </div>
+                    )}
 
                     <div className="flex flex-wrap justify-center gap-4 pt-2">
                       <Magnetic as="div" className="inline-flex">
