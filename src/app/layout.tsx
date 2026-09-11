@@ -14,7 +14,14 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "ISD Info Solutions | Build Growth Intelligently",
+  metadataBase: new URL('https://isdinfosolutions.com'),
+  alternates: {
+    canonical: '/',
+  },
+  title: {
+    default: "ISD Info Solutions | Build Growth Intelligently",
+    template: "%s | ISD Info Solutions",
+  },
   description:
     "We build high-performance websites, craft strategic SEO campaigns, and manage digital marketing that drives measurable business growth.",
   keywords: [

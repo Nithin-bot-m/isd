@@ -71,7 +71,7 @@ export default function ContactPage() {
     <PageShell
       eyebrow="Contact Leadership"
       title={<>Let&apos;s build what moves your <span className="text-gradient">business forward</span></>}
-      intro="Tell us about your project, your goals, and your timeline. All submissions are routed directly to executive leadership at sudhanvaev@isdinfosolutions.com."
+      intro="Tell us about your project, your goals, and your timeline. All submissions are routed directly to executive leadership at info@isdinfosolutions.com."
     >
       <PageSection>
         <div className="grid gap-10 lg:grid-cols-[7fr_5fr]">
@@ -106,7 +106,7 @@ export default function ContactPage() {
                     </div>
                     <h3 className="font-heading text-2xl sm:text-3xl font-bold text-foreground">Inquiry Dispatched</h3>
                     <p className="mt-3 max-w-md text-sm sm:text-base text-muted-foreground leading-relaxed">
-                      Thank you for reaching out, <strong className="text-foreground">{form.name}</strong>. Your project brief has been securely routed to <strong className="text-foreground">sudhanvaev@isdinfosolutions.com</strong>.
+                      Thank you for reaching out, <strong className="text-foreground">{form.name}</strong>. Your project brief has been securely routed to <strong className="text-foreground">info@isdinfosolutions.com</strong>.
                     </p>
                     <div className="mt-4 rounded-2xl bg-muted/60 border border-border p-4 text-xs font-bold text-[#0284C7] dark:text-[#38BDF8]">
                       Tracking Reference: {form._ref}
@@ -123,7 +123,7 @@ export default function ContactPage() {
                         WhatsApp Support (+91 63611 20944)
                       </a>
                       <a
-                        href={`mailto:sudhanvaev@isdinfosolutions.com?subject=Project%20Brief%20%5B${form._ref}%5D%20-%20${encodeURIComponent(form.name)}&body=Tracking%20Ref:%20${form._ref}%0D%0ACompany:%20${encodeURIComponent(form.company)}%0D%0AService:%20${encodeURIComponent(form.service)}`}
+                        href={`mailto:info@isdinfosolutions.com?subject=Project%20Brief%20%5B${form._ref}%5D%20-%20${encodeURIComponent(form.name)}&body=Tracking%20Ref:%20${form._ref}%0D%0ACompany:%20${encodeURIComponent(form.company)}%0D%0AService:%20${encodeURIComponent(form.service)}`}
                         className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-5 py-2.5 text-xs font-bold text-foreground hover:border-[#0284C7] hover:text-[#0284C7] transition-colors"
                       >
                         <Mail className="h-3.5 w-3.5 text-[#0284C7] dark:text-[#38BDF8]" />
@@ -275,7 +275,7 @@ export default function ContactPage() {
                 <h3 className="mt-2 font-heading text-xl sm:text-2xl font-bold">Contact Directly</h3>
                 <div className="mt-6 space-y-4 text-sm">
                   <a
-                    href="mailto:sudhanvaev@isdinfosolutions.com"
+                    href="mailto:info@isdinfosolutions.com"
                     className="flex items-center gap-3 text-slate-300 transition-colors hover:text-white group"
                   >
                     <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white/10 text-sky-400 group-hover:bg-[#0284C7] group-hover:text-white transition-colors">
@@ -283,7 +283,7 @@ export default function ContactPage() {
                     </div>
                     <div className="min-w-0">
                       <div className="text-xs text-slate-400">Executive Email</div>
-                      <span className="font-semibold text-white break-all">sudhanvaev@isdinfosolutions.com</span>
+                      <span className="font-semibold text-white break-all">info@isdinfosolutions.com</span>
                     </div>
                   </a>
                   <a

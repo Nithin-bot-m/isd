@@ -26,7 +26,7 @@ const servicesList = [
   {
     title: 'Digital Growth Engineering™',
     desc: 'Total discovery: SEO, AEO, GEO, and high-converting demand generation.',
-    href: '/services/digital-marketing',
+    href: '/services/digital-growth-engineering',
     icon: Megaphone,
     badge: 'Growth Engine',
   },
@@ -40,7 +40,7 @@ const servicesList = [
   {
     title: 'Education Ecosystem Engineering™',
     desc: 'Admissions funnel journeys, institutional positioning, and EdTech growth.',
-    href: '/services/education-marketing',
+    href: '/services/education-ecosystem-engineering',
     icon: GraduationCap,
     badge: 'Education',
   },

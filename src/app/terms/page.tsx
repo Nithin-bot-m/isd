@@ -1,5 +1,19 @@
+import type { Metadata } from 'next';
 import { PageShell, PageSection } from '@/components/page-shell';
 import { Reveal } from '@/components/reveal';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/terms',
+  },
+  title: 'Terms of Service — Legal & Engagement Terms',
+  description: 'Terms and conditions governing client relationships, service delivery frameworks, and digital engagement with ISD Info Solutions.',
+  openGraph: {
+    title: 'Terms of Service | ISD Info Solutions',
+    description: 'Terms and conditions governing client relationships and digital services with ISD Info Solutions.',
+  },
+};
+
 
 export default function TermsPage() {
   return (

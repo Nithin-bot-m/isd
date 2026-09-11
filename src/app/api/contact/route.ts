@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-const RECIPIENT_EMAIL = 'sudhanvaev@isdinfosolutions.com';
+const RECIPIENT_EMAIL = process.env.CONTACT_RECIPIENT_EMAIL || 'sudhanvaev@isdinfosolutions.com';
 
 // ------------------- SECURITY CONTROLS -------------------
 
@@ -347,7 +347,7 @@ Direct Reply: mailto:${email}
   } catch (error: any) {
     console.error('Contact form submission handler error:', error);
     return NextResponse.json(
-      { error: 'Failed to process inquiry securely. Please reach out directly to sudhanvaev@isdinfosolutions.com' },
+      { error: 'Failed to process inquiry securely. Please reach out directly to info@isdinfosolutions.com' },
       { status: 500 }
     );
   }

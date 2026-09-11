@@ -14,8 +14,8 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: 'digital-marketing',
-    slug: 'digital-marketing',
+    id: 'digital-growth-engineering',
+    slug: 'digital-growth-engineering',
     title: 'Digital Growth Engineering™',
     shortDescription:
       'The systematic engineering of digital presence, search & AI discoverability (SEO, AEO, GEO), paid acquisition, conversion architecture, and revenue intelligence.',
@@ -34,7 +34,7 @@ export const services: Service[] = [
     valueProps:
       'omni-search & AI discoverability, qualified high-intent pipeline, frictionless conversion, multi-touch revenue attribution',
     ctaText: 'Get a Growth Audit',
-    learnMoreHref: '/services/digital-marketing',
+    learnMoreHref: '/services/digital-growth-engineering',
   },
   {
     id: 'enterprise-solutions',
@@ -60,8 +60,8 @@ export const services: Service[] = [
     learnMoreHref: '/services/enterprise-solutions',
   },
   {
-    id: 'education-marketing',
-    slug: 'education-marketing',
+    id: 'education-ecosystem-engineering',
+    slug: 'education-ecosystem-engineering',
     title: 'Education Ecosystem Engineering™',
     shortDescription:
       'Strategic institutional transformation, accreditation advisory (NAAC, NBA, NIRF), admissions funnel engineering, and industry-academia integration.',
@@ -80,7 +80,7 @@ export const services: Service[] = [
     valueProps:
       'trust-first communication, long-cycle student nurturing, statutory compliance readiness, campus placement transformation',
     ctaText: 'Plan an Ecosystem Strategy',
-    learnMoreHref: '/services/education-marketing',
+    learnMoreHref: '/services/education-ecosystem-engineering',
   },
   {
     id: 'salesforce-devops',
@@ -461,18 +461,37 @@ export const processSteps = [
 export const valueWords = ['Visibility', 'Engagement', 'Automation', 'Scale'];
 
 export const footerServiceLinks = [
-  { label: 'Digital Growth Engineering™', href: '/services/digital-marketing' },
+  { label: 'Digital Growth Engineering™', href: '/services/digital-growth-engineering' },
   { label: 'Enterprise Solution Engineering™', href: '/services/enterprise-solutions' },
-  { label: 'Education Ecosystem Engineering™', href: '/services/education-marketing' },
+  { label: 'Education Ecosystem Engineering™', href: '/services/education-ecosystem-engineering' },
   { label: 'Salesforce & Copado DevOps', href: '/services/salesforce-devops' },
 ];
 
 export const footerCompanyLinks = [
   { label: 'About Us', href: '/about' },
-  { label: 'Our Work', href: '/work' },
-  { label: 'Blog', href: '/blog' },
+  { label: 'Our Work', href: '/case-studies' },
+  { label: 'Blog & Insights', href: '/insights' },
   { label: 'Contact', href: '/contact' },
 ];
+
+export const socialLinks = [
+  {
+    name: 'Instagram',
+    label: '@isd.info.solutions',
+    href: 'https://www.instagram.com/isd.info.solutions?stkn=MWhyMXgwY3U3NHZlcw==',
+  },
+  {
+    name: 'Facebook',
+    label: 'ISD Info Solutions',
+    href: 'https://www.facebook.com/share/191VahNXcK/',
+  },
+  {
+    name: 'X',
+    label: '@ISDInfoSol',
+    href: 'https://x.com/ISDInfoSol',
+  },
+];
+
 
 export const aboutBeliefs = [
   {

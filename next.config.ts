@@ -71,6 +71,35 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/work",
+        destination: "/case-studies",
+        permanent: true,
+      },
+      {
+        source: "/blog",
+        destination: "/insights",
+        permanent: true,
+      },
+      {
+        source: "/services/digital-marketing",
+        destination: "/services/digital-growth-engineering",
+        permanent: true,
+      },
+      {
+        source: "/services/education-marketing",
+        destination: "/services/education-ecosystem-engineering",
+        permanent: true,
+      },
+      {
+        source: "/services/ai-platforms",
+        destination: "/services/enterprise-solutions",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
