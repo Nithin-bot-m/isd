@@ -45,11 +45,6 @@ export function Footer() {
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-slate-300">
               We partner with ambitious brands to build digital experiences that convert, scale, and endure.
             </p>
-
-            <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-slate-300 backdrop-blur-sm">
-              <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>All Systems Operational</span>
-            </div>
           </div>
 
           <FooterCol title="Services" items={footerServiceLinks} />

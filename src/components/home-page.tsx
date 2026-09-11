@@ -102,12 +102,7 @@ function HeroSection() {
           transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col items-center"
         >
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/[0.06] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-white/90 backdrop-blur-md shadow-sm">
-            <span className="pulse-dot h-2 w-2 rounded-full bg-emerald-400" />
-            <span>Strategy-Led Growth Partner &bull; Active</span>
-          </div>
-
-          <h1 className="mt-7 text-4xl sm:text-6xl md:text-7xl font-extrabold leading-[1.08] tracking-tight text-white max-w-4xl">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-[1.08] tracking-tight text-white max-w-4xl">
             Build Growth{' '}
             <span className="bg-gradient-to-r from-sky-400 via-indigo-300 to-amber-300 bg-clip-text text-transparent">
               Intelligently
