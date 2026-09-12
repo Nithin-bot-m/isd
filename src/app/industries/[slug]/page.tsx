@@ -33,7 +33,7 @@ export default function IndustryDetailPage() {
   const slug = params?.slug as string;
 
   const industry = industries.find(
-    (i) => i.id.toLowerCase() === slug?.toLowerCase() || i.slug?.toLowerCase() === slug?.toLowerCase()
+    (i) => i.id.toLowerCase() === slug?.toLowerCase()
   ) || industries[0];
 
   if (!industry && slug) {
@@ -158,7 +158,7 @@ export default function IndustryDetailPage() {
 
           <div className="rounded-3xl border border-border bg-card p-8 shadow-xl md:p-10">
             <span className="rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#0284C7] dark:text-[#38BDF8]">
-              {relatedCaseStudy.tag}
+              {relatedCaseStudy.tags[0]}
             </span>
             <h3 className="mt-4 font-heading text-2xl font-bold md:text-3xl">{relatedCaseStudy.title}</h3>
             <div className="mt-6 grid gap-6 sm:grid-cols-3">

@@ -8,7 +8,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const industry = industries.find(
-    (i) => i.id.toLowerCase() === slug?.toLowerCase() || (i.slug && i.slug.toLowerCase() === slug?.toLowerCase())
+    (i) => i.id.toLowerCase() === slug?.toLowerCase()
   );
 
   if (!industry) {

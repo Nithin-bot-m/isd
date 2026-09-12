@@ -74,7 +74,7 @@ export function HomePage() {
 /* ============================ HERO ============================ */
 function HeroSection() {
   return (
-    <section id="hero" className="relative overflow-hidden pt-32 pb-20 md:pt-44 md:pb-32 bg-[#0A0F1D] text-white">
+    <section id="hero" className="relative overflow-hidden pt-28 pb-12 sm:pt-36 sm:pb-14 md:pt-40 md:pb-16 bg-[#0A0F1D] text-white">
       {/* Dynamic atmospheric mesh background */}
       <div className="mesh-bg absolute inset-0 opacity-80" aria-hidden />
       
@@ -172,16 +172,26 @@ function HeroSection() {
 /* ============================ TRUST BAR ============================ */
 function TrustBar() {
   return (
-    <section id="trust" className="relative -mt-px bg-card py-10 sm:py-12 md:py-16 border-b border-border/80 overflow-hidden w-full max-w-full">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="trust" className="relative -mt-px bg-[#0A0F1D] text-white py-10 sm:py-12 md:py-14 border-t border-b border-white/10 overflow-hidden w-full max-w-full">
+      {/* Dynamic atmospheric mesh background */}
+      <div className="mesh-bg absolute inset-0 opacity-60" aria-hidden />
+      <div className="grid-overlay absolute inset-0 opacity-15" aria-hidden />
+
+      {/* Subtle ambient glow */}
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[260px] w-[600px] rounded-full bg-[#0284C7]/12 blur-[100px] pointer-events-none"
+        aria-hidden
+      />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
           {trustStats.map((stat, i) => (
             <Reveal key={i} delay={i * 0.08}>
-              <div className="glass-card flex h-full flex-col items-center justify-center rounded-2xl p-4 sm:p-6 text-center">
-                <div className="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0284C7] dark:text-[#38BDF8] md:text-5xl">
+              <div className="group relative flex h-full flex-col items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:p-6 text-center backdrop-blur-xl transition-all duration-300 hover:border-sky-400/50 hover:bg-white/[0.08] hover:-translate-y-1 hover:shadow-xl hover:shadow-[#0284C7]/15">
+                <div className="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-300 bg-clip-text text-transparent md:text-5xl">
                   {stat.num}
                 </div>
-                <div className="mt-2 text-[0.72rem] sm:text-xs font-bold uppercase tracking-wider text-muted-foreground md:text-sm">
+                <div className="mt-2 text-[0.72rem] sm:text-xs font-semibold uppercase tracking-wider text-slate-300 md:text-sm">
                   {stat.label}
                 </div>
               </div>
@@ -197,6 +207,9 @@ function TrustBar() {
 function ServicesSection() {
   return (
     <section id="services" className="py-20 sm:py-24 md:py-32 bg-background relative overflow-hidden w-full max-w-full">
+      {/* Smooth soft ambient blend from dark hero section */}
+      <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-slate-200/30 to-transparent dark:from-black/30 dark:to-transparent pointer-events-none" aria-hidden />
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-14 max-w-2xl">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#0284C7]/10 dark:bg-[#38BDF8]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0284C7] dark:text-[#38BDF8] mb-3">

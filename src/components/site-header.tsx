@@ -67,7 +67,7 @@ export function Header() {
   const [servicesMenuOpen, setServicesMenuOpen] = React.useState(false);
   const [mounted, setMounted] = React.useState(false);
   const { theme, setTheme } = useTheme();
-  const menuRef = React.useRef<HTMLDivElement>(null);
+  const menuRef = React.useRef<HTMLUListElement>(null);
 
   React.useEffect(() => {
     setMounted(true);
