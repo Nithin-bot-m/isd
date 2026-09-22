@@ -5,8 +5,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
-  title: 'Digital Growth Engineering, Enterprise Web Platforms & SEO',
-  description: 'ISD Info Solutions engineers high-converting digital platforms, performance marketing systems, and cloud architectures for ambitious modern brands.',
+  title: {
+    absolute: 'ISD Info Solutions | Enterprise Digital Growth, Web Platforms & AI',
+  },
+  description:
+    'ISD Info Solutions is an enterprise digital growth and technology agency engineering high-converting web platforms, custom AI systems, performance marketing, and Salesforce DevOps.',
+  keywords: [
+    'ISD Info Solutions',
+    'isd info solutions',
+    'isdinfosolutions',
+    'isd infosolutions.com',
+    'ISD Info Solutions company',
+    'Digital Growth Engineering',
+    'Enterprise Solution Engineering',
+    'Education Ecosystem Engineering',
+    'Salesforce Copado DevOps',
+  ],
 };
 
 export default function Home() {

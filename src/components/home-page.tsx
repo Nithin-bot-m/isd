@@ -102,7 +102,13 @@ function HeroSection() {
           transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col items-center"
         >
+          <div className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-500/10 px-4 py-1.5 text-xs sm:text-sm font-bold uppercase tracking-[0.14em] text-sky-300 backdrop-blur-md mb-6 shadow-[0_0_25px_rgba(56,189,248,0.2)]">
+            <Sparkles className="h-3.5 w-3.5 text-sky-400" />
+            ISD Info Solutions
+          </div>
+
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-[1.08] tracking-tight text-white max-w-4xl">
+            <span className="sr-only">ISD Info Solutions — </span>
             Build Growth{' '}
             <span className="bg-gradient-to-r from-sky-400 via-indigo-300 to-amber-300 bg-clip-text text-transparent">
               Intelligently
@@ -110,7 +116,7 @@ function HeroSection() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-base sm:text-lg md:text-xl leading-relaxed text-slate-300/90 font-normal">
-            Integrated digital marketing, custom AI platforms, education marketing, and Salesforce DevOps for organizations ready to scale without vendor silos.
+            <strong className="text-white font-semibold">ISD Info Solutions</strong> is an enterprise digital growth and technology agency. We deliver strategic digital marketing, custom AI platforms, education ecosystems, and Salesforce DevOps for organizations scaling without silos.
           </p>
 
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">

@@ -380,6 +380,18 @@ export const insights: Insight[] = [
 
 export const faqs = [
   {
+    q: 'What is ISD Info Solutions?',
+    a: 'ISD Info Solutions (accessible at isdinfosolutions.com) is an enterprise digital growth engineering and technology agency. We partner with ambitious organizations to build high-performance web platforms, engineer omni-channel search & AI discoverability (SEO, AEO, GEO), build custom AI platforms, and manage cloud & CRM architectures that drive measurable, compounding business growth.',
+  },
+  {
+    q: 'What services does ISD Info Solutions provide?',
+    a: 'ISD Info Solutions delivers three flagship practice areas: (1) Digital Growth Engineering™ (omni-search visibility, SEO, GEO, paid media, CRO, and revenue intelligence), (2) Enterprise Solution Engineering™ (custom SaaS platforms, autonomous AI agents, workflow automation, and Salesforce & Copado DevOps), and (3) Education Ecosystem Engineering™ (institutional accreditation advisory, admissions funnel engineering, and campus placements).',
+  },
+  {
+    q: 'Where is ISD Info Solutions based and how can I contact the team?',
+    a: 'ISD Info Solutions operates globally with primary operations in India. You can connect directly with executive leadership by emailing info@isdinfosolutions.com or calling / WhatsApp messaging +91 63611 20944. Consultations can also be booked through our website contact form.',
+  },
+  {
     q: 'What types of organizations does ISD work with?',
     a: 'We partner with education institutions, B2B SaaS companies, enterprise technology firms, and healthcare organizations. Our approach is tailored to the unique growth challenges of each vertical.',
   },

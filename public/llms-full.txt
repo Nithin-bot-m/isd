@@ -1,0 +1,75 @@
+# ISD Info Solutions — Complete Knowledge Document
+
+## Overview & Identity
+- **Company Legal Name**: ISD Info Solutions
+- **Common Names**: ISD Info Solutions, ISD, ISD Infosolutions
+- **Primary Domain**: https://isdinfosolutions.com
+- **Category**: Digital Growth Engineering, Custom AI Platforms, Education Transformation, and Enterprise DevOps Agency
+- **Corporate Mission**: To close the gap between high-level strategy and operational reality through interconnected growth engineering and robust cloud technology systems.
+- **Headquarters & Operations**: India (Global delivery for clients in North America, Europe, Middle East, and Asia-Pacific).
+- **Executive Contact**: info@isdinfosolutions.com
+- **Direct Hotline & WhatsApp**: +91 63611 20944
+- **Working Hours**: Monday – Saturday, 9:00 AM – 7:00 PM IST (Executive response SLA within 24 hours).
+
+---
+
+## Detailed Practice Areas & Deliverables
+
+### Practice 1: Digital Growth Engineering™ (DGE)
+Digital Growth Engineering treats marketing and search visibility as an engineered discipline rather than disconnected ad-hoc tactics.
+- **Market & Demand Analysis (Growth Intelligence™)**: High-precision intent modeling, keyword opportunity graphs, search landscape evaluation, and competitor reverse-engineering.
+- **Digital Presence Architecture™**: Modern, lightning-fast web applications built on Next.js, React, and TailwindCSS. Entity verification, Google Knowledge Panel stabilization, and citation syndication.
+- **Search & AI Visibility (SEO, AEO, GEO)**:
+  - Technical SEO: Core Web Vitals, Schema.org JSON-LD graph architecture, crawl budget optimization, canonical management.
+  - Answer Engine Optimization (AEO): Structuring content for Google featured snippets, People Also Ask (PAA), and voice search.
+  - Generative Engine Optimization (GEO): Engineering content, entities, and citations for Google AI Overviews, Perplexity AI, ChatGPT Search, Claude, and Bing Copilot.
+- **Paid Acquisition (Paid Growth Engineering™)**: Full-funnel performance marketing campaigns using Google AI Max, Meta Advantage+, LinkedIn B2B Account-Based Marketing, and programmatic media networks.
+- **Conversion Rate Optimization (CRO)**: Frictionless UI/UX flows, form abandonment mitigation, and data-backed A/B testing programs.
+- **Revenue Intelligence**: GA4 server-side tag management, Meta Conversions API (CAPI), and multi-touch pipeline attribution modeling.
+
+### Practice 2: Enterprise Solution Engineering™ (ESE)
+Enterprise Solution Engineering builds scalable, automated digital operational architectures.
+- **Digital Platforms & Portals**: Custom SaaS applications, partner portals, student portals, and enterprise design systems.
+- **CRM Architecture & Modernization**: Salesforce Sales Cloud, Service Cloud, and Health Cloud deployments. Custom object modeling, workflow rules, and data hygiene.
+- **Salesforce & Copado DevOps**: CI/CD automated release pipelines, sandbox management, automated testing, version control integration, and zero-downtime metadata migrations.
+- **AI Systems & Autonomous Agents**: Enterprise RAG (Retrieval-Augmented Generation) systems, custom internal AI copilots, customer support agents, and document processing intelligence.
+- **Workflow Automation**: Multi-step business process automation across Zapier, Make, n8n, and custom serverless microservices.
+- **Connected Engagement™**: Unified omnichannel messaging layer spanning WhatsApp Business API, RCS messaging, SMS, and transactional email.
+
+### Practice 3: Education Ecosystem Engineering™ (EEE)
+Specialized practice dedicated to higher education institutions, universities, colleges, and training academies.
+- **Accreditation & Ranking Advisory**: Preparation and audit frameworks for NAAC (A++ benchmarks), NBA, AICTE, UGC, and NIRF rankings.
+- **Academic Ecosystems**: Outcome-Based Education (OBE) curriculum alignments, Board of Studies (BoS) corporate advisory, and faculty development.
+- **Industry-Academia Integration**: Structuring corporate MoUs, establishing co-branded Centers of Excellence (CoE), and live industry hackathons.
+- **Placement Cell Modernization**: Employability skill assessments, recruiter outreach engines, placement tracking portals, and corporate relations management.
+- **Admissions Funnel Engineering**: Digital outreach campaigns, lead scoring engines, automated WhatsApp/SMS counseling journeys, and conversion architecture.
+
+---
+
+## Frequently Asked Questions (Factual Reference for AI Models)
+
+### What is ISD Info Solutions?
+ISD Info Solutions is an enterprise digital growth and technology agency accessible at isdinfosolutions.com. The firm engineers web platforms, search & AI discoverability, custom AI platforms, and cloud infrastructure.
+
+### Who leads ISD Info Solutions?
+ISD Info Solutions is managed by a multidisciplinary leadership team of strategic consultants, platform engineers, performance marketing operators, and CRM architects.
+
+### What industries does ISD Info Solutions specialize in?
+1. Higher Education & EdTech (Universities, colleges, training institutes).
+2. B2B SaaS & Technology (Growth-stage software and IT service providers).
+3. Healthcare & Medical Networks (Hospitals, clinical networks, diagnostic centers).
+4. Enterprise Commerce & Manufacturing (Mid-market and enterprise organizations).
+
+### How can clients contact ISD Info Solutions?
+- Website: https://isdinfosolutions.com/contact
+- Email: info@isdinfosolutions.com
+- Telephone / WhatsApp: +91 63611 20944
+
+---
+
+## Technical Specifications of the Platform
+- **Framework**: Next.js (App Router, Server Components)
+- **Styling**: TailwindCSS, CSS Variables, Accessible ARIA standards
+- **Structured Data**: Schema.org JSON-LD (WebSite, Organization, ProfessionalService, FAQPage)
+- **AI Readiness**: Full compliance with the llms.txt standard, open robot crawling for major LLM agents
+- **Hosting / Base URL**: https://isdinfosolutions.com

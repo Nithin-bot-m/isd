@@ -1,5 +1,38 @@
+# robots.txt for ISD Info Solutions (https://isdinfosolutions.com)
+
+# Standard Search Crawlers
 User-agent: *
 Allow: /
 Disallow: /api/
 
+# AI Search Engines & Generative Crawlers
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemaps & AI Knowledge Manifests
 Sitemap: https://isdinfosolutions.com/sitemap.xml
+LLMs-Txt: https://isdinfosolutions.com/llms.txt
