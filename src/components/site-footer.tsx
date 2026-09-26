@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { footerServiceLinks, footerCompanyLinks, socialLinks } from '@/lib/data';
+import { footerServiceLinks, footerProductLinks, footerCompanyLinks, socialLinks } from '@/lib/data';
 import { Mail, Phone, ArrowUpRight, Instagram, Facebook } from 'lucide-react';
 
 function XIcon({ className = 'h-4 w-4' }: { className?: string }) {
@@ -23,8 +23,8 @@ export function Footer() {
       <div className="grid-overlay absolute inset-0 opacity-10 pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 sm:gap-12 border-b border-white/10 pb-12 sm:pb-16 md:grid-cols-2 lg:grid-cols-4">
-          <div>
+        <div className="grid grid-cols-1 gap-10 sm:gap-12 border-b border-white/10 pb-12 sm:pb-16 md:grid-cols-2 lg:grid-cols-5">
+          <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 group" aria-label="ISD Info Solutions home">
               <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-xl border border-white/20 bg-white p-0.5 shadow-md transition-transform duration-200 group-hover:scale-105">
                 <Image
@@ -48,6 +48,7 @@ export function Footer() {
           </div>
 
           <FooterCol title="Services" items={footerServiceLinks} />
+          <FooterCol title="Platforms" items={footerProductLinks} />
           <FooterCol title="Company" items={footerCompanyLinks} />
 
           <div>
@@ -162,23 +163,42 @@ function FooterCol({
   items,
 }: {
   title: string;
-  items: { label: string; href: string }[];
+  items: { label: string; href: string; isExternal?: boolean }[];
 }) {
   return (
     <div>
       <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-white">{title}</h3>
       <ul className="mt-4 space-y-3">
-        {items.map((item) => (
-          <li key={item.label}>
-            <Link
-              href={item.href}
-              className="group inline-flex items-center gap-1 text-sm text-slate-300 transition-all duration-200 hover:translate-x-0.5 hover:text-white"
-            >
-              <span>{item.label}</span>
-              <ArrowUpRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100 text-sky-400" />
-            </Link>
-          </li>
-        ))}
+        {items.map((item) => {
+          const isExt = item.isExternal || item.href.startsWith('http');
+          if (isExt) {
+            return (
+              <li key={item.label}>
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-1 text-sm text-slate-300 transition-all duration-200 hover:translate-x-0.5 hover:text-white"
+                >
+                  <span>{item.label}</span>
+                  <ArrowUpRight className="h-3 w-3 opacity-60 transition-opacity group-hover:opacity-100 text-amber-400" />
+                </a>
+              </li>
+            );
+          }
+
+          return (
+            <li key={item.label}>
+              <Link
+                href={item.href}
+                className="group inline-flex items-center gap-1 text-sm text-slate-300 transition-all duration-200 hover:translate-x-0.5 hover:text-white"
+              >
+                <span>{item.label}</span>
+                <ArrowUpRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100 text-sky-400" />
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

@@ -110,7 +110,43 @@ export function JsonLd() {
             url: 'https://isdinfosolutions.com/services/education-ecosystem-engineering',
           },
         },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': ['WebApplication', 'FinancialService'],
+            name: 'NFX³ (NFX3) — Real-Time Forex & Gold Bullion Intelligence',
+            alternateName: ['NFX3', 'NFX³', 'NFX3 Market Intel'],
+            description:
+              'Official proprietary real-time financial market intelligence platform engineered by ISD Info Solutions, featuring sub-second XAU/USD telemetry, ForexFactory calendar synchronization, and CFTC COT flow analytics.',
+            url: 'https://isdinfosolutions.com/products/nfx3',
+            sameAs: 'https://www.nfx3.com',
+          },
+        },
       ],
+    },
+  };
+
+  const nfx3Schema = {
+    '@context': 'https://schema.org',
+    '@type': ['WebApplication', 'FinancialService'],
+    '@id': 'https://www.nfx3.com/#platform',
+    name: 'NFX3 (NFX³) — Real-Time Forex & Gold Bullion Intelligence',
+    alternateName: ['NFX3', 'NFX³', 'NFX 3', 'NFX3 Market Intel'],
+    url: 'https://www.nfx3.com',
+    description:
+      'NFX3 is an institutional-grade, real-time market intelligence platform covering global foreign exchange (Forex) and gold bullion (XAU/USD) markets. Conceived, engineered, and operated by ISD Info Solutions.',
+    creator: {
+      '@id': 'https://isdinfosolutions.com/#organization',
+    },
+    publisher: {
+      '@id': 'https://isdinfosolutions.com/#organization',
+    },
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'All',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
     },
   };
 
@@ -136,6 +172,10 @@ export function JsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(nfx3Schema) }}
       />
       <script
         type="application/ld+json"

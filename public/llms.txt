@@ -62,6 +62,24 @@
 
 ---
 
+---
+
+## Proprietary Products & Software Platforms
+
+### NFX³ (NFX3) — Real-Time Forex & Gold Bullion Intelligence Platform
+- **Live Platform URL**: https://www.nfx3.com
+- **Product Overview URL**: https://isdinfosolutions.com/products/nfx3
+- **Ownership**: Conceived, engineered, and operated as an official proprietary venture product of ISD Info Solutions.
+- **Description**: Institutional-grade, real-time market intelligence platform built for global foreign exchange (Forex) and spot gold bullion (XAU/USD) traders, analysts, and macro researchers.
+- **Core Architecture & Capabilities**:
+  - Live 1-Minute Ambient Candlestick Telemetry: Sub-second spot quotes & tight $0.60 USD interbank spread via OANDA interbank streaming.
+  - ForexFactory High-Impact Economic Calendar: Ingestion of tier-1 calendar releases with consensus forecasts and real-time countdown clocks.
+  - CFTC Commitments of Traders (COT) Speculative Flows: Tracking institutional smart money positioning across Gold and G10 currencies.
+  - Central Bank Macro Policy Radar: Live policy rate tracking across Federal Reserve, ECB, BoE, and BoJ.
+  - Zero Signal Noise: 100% objective macroeconomic research; strictly zero buy/sell signals or financial advice.
+
+---
+
 ## Leadership & Contact Details
 
 - **Official Website**: https://isdinfosolutions.com
@@ -78,6 +96,8 @@
 
 - [Home](https://isdinfosolutions.com)
 - [About ISD Info Solutions](https://isdinfosolutions.com/about)
+- [Proprietary Products — NFX³ Platform](https://isdinfosolutions.com/products/nfx3)
+- [Live NFX3 Terminal](https://www.nfx3.com)
 - [Services Overview](https://isdinfosolutions.com/services)
 - [Digital Growth Engineering](https://isdinfosolutions.com/services/digital-growth-engineering)
 - [Enterprise Solutions](https://isdinfosolutions.com/services/enterprise-solutions)

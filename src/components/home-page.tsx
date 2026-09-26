@@ -24,6 +24,8 @@ import {
   Code2,
   Globe,
   Sparkle,
+  ArrowUpRight,
+  Radio,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Header } from '@/components/site-header';
@@ -40,6 +42,7 @@ import {
 } from '@/components/ui/accordion';
 import {
   services,
+  products,
   caseStudies,
   industries,
   insights,
@@ -60,6 +63,7 @@ export function HomePage() {
         <WhyIsdSection />
         <ValueBand />
         <InteractiveProcess />
+        <ProprietaryProductsSection />
         <FilterableWorkSection />
         <IndustriesSection />
         <InsightsSection />
@@ -396,11 +400,194 @@ function ValueBand() {
   );
 }
 
+/* ============================ PROPRIETARY PLATFORMS SPOTLIGHT ============================ */
+function ProprietaryProductsSection() {
+  const nfx3 = products.find((p) => p.id === 'nfx3') || products[0];
+
+  return (
+    <section id="products" className="relative overflow-hidden bg-[#070A14] py-20 sm:py-24 text-white md:py-32 w-full max-w-full">
+      {/* Background Ambience */}
+      <div className="mesh-bg absolute inset-0 opacity-70" aria-hidden />
+      <div className="grid-overlay absolute inset-0 opacity-20" aria-hidden />
+      <div
+        className="absolute -top-40 right-10 h-[500px] w-[500px] rounded-full bg-amber-500/10 blur-[140px] pointer-events-none"
+        aria-hidden
+      />
+      <div
+        className="absolute -bottom-40 left-10 h-[500px] w-[500px] rounded-full bg-[#0284C7]/15 blur-[140px] pointer-events-none"
+        aria-hidden
+      />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+          <Reveal className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/25 bg-amber-400/10 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.14em] text-amber-300 mb-3 backdrop-blur-md">
+              <Zap className="h-3.5 w-3.5 text-amber-400" />
+              Proprietary Platforms &bull; Venture Engineering
+            </div>
+            <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-5xl">
+              Software platforms engineered for{' '}
+              <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-sky-400 bg-clip-text text-transparent">
+                real-time scale
+              </span>
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-slate-300 md:text-lg">
+              Beyond enterprise client systems, ISD conceives, architects, and operates proprietary software ventures that push the boundaries of real-time telemetry and data pipelines.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.1} className="shrink-0">
+            <Link
+              href="/products/nfx3"
+              className="inline-flex items-center gap-2 text-sm font-bold text-amber-300 hover:text-amber-200 transition-colors"
+            >
+              Explore All Platform Architectures
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Reveal>
+        </div>
+
+        {/* Flagship Product Bento Grid */}
+        <Reveal delay={0.15}>
+          <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-br from-white/[0.07] via-white/[0.03] to-transparent p-6 sm:p-10 backdrop-blur-2xl shadow-2xl">
+            <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
+              {/* Product Info */}
+              <div className="lg:col-span-7">
+                <div className="flex flex-wrap items-center gap-2 mb-4">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-bold text-emerald-400 border border-emerald-500/30">
+                    <span className="h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
+                    Live In Production
+                  </span>
+                  <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-[0.72rem] font-semibold text-slate-300">
+                    Fintech &bull; Gold & Forex Telemetry
+                  </span>
+                  <span className="rounded-full bg-amber-400/10 px-2.5 py-0.5 text-[0.72rem] font-bold text-amber-400 border border-amber-400/20">
+                    An ISD Product
+                  </span>
+                </div>
+
+                <h3 className="font-heading text-3xl sm:text-4xl font-black text-white">
+                  {nfx3.name}{' '}
+                  <span className="text-gradient-frost font-light sm:text-2xl text-xl block sm:inline">
+                    — Decode The Market
+                  </span>
+                </h3>
+
+                <p className="mt-4 text-base leading-relaxed text-slate-300">
+                  {nfx3.shortDescription}
+                </p>
+
+                {/* Feature Bullet Points */}
+                <div className="mt-6 grid gap-2.5 sm:grid-cols-2 text-xs text-slate-200">
+                  {nfx3.features.slice(0, 4).map((feat) => (
+                    <div key={feat} className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
+                      <span>{feat}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTAs */}
+                <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
+                  <Magnetic as="div">
+                    <Button
+                      asChild
+                      size="lg"
+                      className="rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 font-bold text-black shadow-xl shadow-amber-500/20 hover:from-amber-300 hover:to-amber-400 hover:scale-[1.02] transition-all"
+                    >
+                      <a href="https://www.nfx3.com/" target="_blank" rel="noopener noreferrer">
+                        Launch NFX3 Platform
+                        <ArrowUpRight className="h-4 w-4 ml-1.5" />
+                      </a>
+                    </Button>
+                  </Magnetic>
+
+                  <Magnetic as="div">
+                    <Button
+                      asChild
+                      size="lg"
+                      variant="outline"
+                      className="rounded-xl border-white/20 bg-white/5 text-white hover:bg-white hover:text-[#0A0F1D] transition-all"
+                    >
+                      <Link href="/products/nfx3">
+                        Read Engineering Case Study
+                        <ArrowRight className="h-4 w-4 ml-1.5" />
+                      </Link>
+                    </Button>
+                  </Magnetic>
+                </div>
+              </div>
+
+              {/* Live-Look Telemetry Bento Card */}
+              <div className="lg:col-span-5">
+                <div className="rounded-2xl border border-white/15 bg-black/40 p-5 sm:p-6 backdrop-blur-xl shadow-inner">
+                  <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                    <div className="flex items-center gap-2">
+                      <span className="font-mono text-sm font-black text-amber-400">XAU/USD SPOT</span>
+                      <span className="rounded bg-white/10 px-1.5 py-0.5 text-[9px] font-bold text-slate-300">
+                        OANDA
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-400">
+                      24/5 STREAMING
+                    </span>
+                  </div>
+
+                  <div className="mt-4 flex items-baseline justify-between">
+                    <div>
+                      <div className="text-[10px] uppercase tracking-wider text-slate-400 font-semibold">
+                        Spot Bullion Telemetry
+                      </div>
+                      <div className="font-mono text-3xl font-black text-white mt-0.5 flex items-baseline gap-1.5">
+                        <span>$4,349.42</span>
+                        <span className="text-xs text-slate-400 font-normal">USD/oz</span>
+                      </div>
+                    </div>
+                    <div className="font-mono text-xs font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-lg border border-emerald-500/20">
+                      +0.75%
+                    </div>
+                  </div>
+
+                  <div className="mt-4 grid grid-cols-2 gap-2.5 border-t border-white/10 pt-3">
+                    <div className="rounded-lg bg-white/[0.04] p-2 text-center border border-white/5">
+                      <div className="text-[9px] uppercase tracking-wider text-slate-400">Interbank Bid</div>
+                      <div className="font-mono text-xs sm:text-sm font-bold text-white">$4,349.12</div>
+                    </div>
+                    <div className="rounded-lg bg-white/[0.04] p-2 text-center border border-white/5">
+                      <div className="text-[9px] uppercase tracking-wider text-slate-400">Interbank Ask</div>
+                      <div className="font-mono text-xs sm:text-sm font-bold text-white">$4,349.72</div>
+                    </div>
+                  </div>
+
+                  <div className="mt-3.5 space-y-1.5 border-t border-white/10 pt-3 text-[11px] text-slate-400">
+                    <div className="flex items-center justify-between">
+                      <span>Interbank Spread</span>
+                      <span className="font-mono font-bold text-amber-300">$0.60 USD</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span>ForexFactory Radar</span>
+                      <span className="font-semibold text-white">Tier-1 Automated Sync</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span>CFTC COT Tracking</span>
+                      <span className="font-semibold text-white">+284.5k Speculative Longs</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
 /* ============================ FILTERABLE CASE STUDIES ============================ */
 function FilterableWorkSection() {
   const [activeCategory, setActiveCategory] = React.useState<string>('All');
 
-  const categories = ['All', 'Education', 'B2B SaaS', 'Healthcare'];
+  const categories = ['All', 'Fintech & Platforms', 'Education', 'B2B SaaS', 'Healthcare'];
 
   const filteredStudies =
     activeCategory === 'All'

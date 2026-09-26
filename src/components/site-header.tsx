@@ -54,6 +54,7 @@ const servicesList = [
 ];
 
 const mainNavLinks = [
+  { label: 'Products', href: '/products/nfx3', badge: 'NFX³' },
   { label: 'Industries', href: '/industries' },
   { label: 'Case Studies', href: '/case-studies' },
   { label: 'About', href: '/about' },
@@ -225,7 +226,24 @@ export function Header() {
                     })}
                   </div>
 
-                  <div className="mt-3.5 rounded-2xl bg-muted/50 p-3 text-xs text-muted-foreground flex items-center justify-between">
+                  <div className="mt-3 rounded-2xl bg-amber-500/10 dark:bg-amber-400/10 border border-amber-400/25 p-3 text-xs text-foreground flex items-center justify-between">
+                    <span className="inline-flex items-center gap-2 font-medium">
+                      <span className="relative flex h-2 w-2">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75"></span>
+                        <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-400"></span>
+                      </span>
+                      <strong className="text-amber-500 dark:text-amber-400 font-bold">Proprietary Product:</strong> NFX³ (Real-Time Market Intel)
+                    </span>
+                    <Link
+                      href="/products/nfx3"
+                      onClick={() => setServicesMenuOpen(false)}
+                      className="font-bold text-amber-500 dark:text-amber-400 hover:underline flex items-center gap-1 shrink-0"
+                    >
+                      Explore NFX³ &rarr;
+                    </Link>
+                  </div>
+
+                  <div className="mt-2 rounded-2xl bg-muted/50 p-2.5 text-xs text-muted-foreground flex items-center justify-between">
                     <span className="inline-flex items-center gap-1.5 font-medium">
                       <Sparkles className="h-3.5 w-3.5 text-[#0284C7] dark:text-[#38BDF8]" />
                       All services connect under one unified architecture.
@@ -244,13 +262,13 @@ export function Header() {
           </li>
 
           {mainNavLinks.map((link) => {
-            const isActive = pathname === link.href;
+            const isActive = pathname === link.href || (link.href === '/products/nfx3' && pathname?.startsWith('/products'));
             return (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   className={cn(
-                    'nav-link inline-flex items-center rounded-full px-3.5 py-1.5 text-[0.92rem] font-medium transition-all duration-200',
+                    'nav-link inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[0.92rem] font-medium transition-all duration-200',
                     isActive
                       ? 'text-[#0284C7] dark:text-[#38BDF8] font-bold bg-[#0284C7]/10 dark:bg-[#38BDF8]/15'
                       : 'text-muted-foreground hover:text-foreground hover:bg-muted/60'
@@ -258,6 +276,11 @@ export function Header() {
                   data-active={isActive}
                 >
                   {link.label}
+                  {link.badge && (
+                    <span className="rounded-full bg-amber-400/20 px-1.5 py-0.2 text-[0.62rem] font-bold text-amber-500 dark:text-amber-400 border border-amber-400/30">
+                      {link.badge}
+                    </span>
+                  )}
                 </Link>
               </li>
             );
@@ -368,9 +391,14 @@ export function Header() {
                         key={link.href}
                         href={link.href}
                         onClick={() => setOpen(false)}
-                        className="block rounded-xl px-3 py-2 font-heading text-sm sm:text-base font-semibold transition-colors hover:bg-muted/70 hover:text-[#0284C7] dark:hover:text-[#38BDF8]"
+                        className="flex items-center justify-between rounded-xl px-3 py-2 font-heading text-sm sm:text-base font-semibold transition-colors hover:bg-muted/70 hover:text-[#0284C7] dark:hover:text-[#38BDF8]"
                       >
-                        {link.label}
+                        <span>{link.label}</span>
+                        {link.badge && (
+                          <span className="rounded-full bg-amber-400/20 px-2 py-0.5 text-[0.65rem] font-bold text-amber-500 dark:text-amber-400 border border-amber-400/30">
+                            {link.badge}
+                          </span>
+                        )}
                       </Link>
                     ))}
                   </div>

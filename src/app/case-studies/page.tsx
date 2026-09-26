@@ -10,6 +10,15 @@ import { Button } from '@/components/ui/button';
 
 const caseStudyData = [
   {
+    id: 'nfx3-platform',
+    tag: 'Fintech & Platforms',
+    tags: ['AI Platforms', 'Enterprise Systems', 'Real-Time Telemetry'],
+    title: 'NFX³ — Real-Time Institutional Forex & Bullion Intelligence Platform',
+    challenge: 'Traders and macro analysts faced fragmented, delayed data streams across central bank policies, high-impact economic releases, and spot bullion feeds—cluttered with speculative noise and unreliable signals.',
+    solution: 'ISD engineered NFX³: a proprietary zero-noise market terminal aggregating sub-second OANDA interbank telemetry, automated ForexFactory calendar ingestion, CFTC COT speculative flow tracking, and central bank rate monitors.',
+    result: '24/5 sub-second streaming interbank telemetry, 100% automated macroeconomic ingestion, and a unified terminal experience serving global FX & bullion participants.',
+  },
+  {
     id: 'university',
     tag: 'Education',
     tags: ['Digital Marketing', 'Education Marketing'],
@@ -38,7 +47,7 @@ const caseStudyData = [
   },
 ];
 
-const filterCategories = ['All', 'Digital Marketing', 'AI Platforms', 'Education Marketing', 'Salesforce DevOps'];
+const filterCategories = ['All', 'Fintech & Platforms', 'Digital Marketing', 'AI Platforms', 'Education Marketing', 'Salesforce DevOps'];
 
 export default function CaseStudiesPage() {
   const [active, setActive] = React.useState('All');

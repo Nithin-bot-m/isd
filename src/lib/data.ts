@@ -198,6 +198,55 @@ export const subServices: SubService[] = [
   },
 ];
 
+export interface Product {
+  id: string;
+  slug: string;
+  name: string;
+  tagline: string;
+  category: string;
+  shortDescription: string;
+  longDescription: string;
+  externalUrl: string;
+  internalUrl: string;
+  features: string[];
+  stats: { value: string; label: string }[];
+  tags: string[];
+  badge?: string;
+}
+
+export const products: Product[] = [
+  {
+    id: 'nfx3',
+    slug: 'nfx3',
+    name: 'NFX³ (NFX3)',
+    tagline: 'Decode The Market — Real-Time Forex & Gold Bullion Intelligence',
+    category: 'Fintech & Market Telemetry',
+    shortDescription:
+      'An institutional-grade, real-time market intelligence platform delivering sub-second spot gold (XAU/USD) telemetry, ForexFactory calendar synchronization, CFTC COT flows, and central bank macro radar.',
+    longDescription:
+      'NFX3 is a proprietary financial intelligence platform engineered and operated by ISD Info Solutions. Built for forex and gold bullion traders, analysts, and institutional macro researchers, NFX3 aggregates verified tier-1 macroeconomic data—including central bank policies (Federal Reserve, ECB, BoE, BoJ), ForexFactory high-impact releases, CFTC Commitments of Traders (COT) institutional positioning, and live interbank quotes—delivered in a streamlined, zero-noise terminal experience.',
+    externalUrl: 'https://www.nfx3.com',
+    internalUrl: '/products/nfx3',
+    badge: 'Proprietary Flagship Product',
+    features: [
+      'Live 1-Minute Ambient Candlestick Telemetry (XAU/USD Gold)',
+      'Sub-Second Interbank Spot Quotes & Tight $0.60 USD Spread via OANDA',
+      'ForexFactory High-Impact Economic Calendar with Live Countdowns',
+      'CFTC Commitments of Traders (COT) Speculative Institutional Flows',
+      'Central Bank Interest Rate Radar & Macro Policy Tracking',
+      '24/5 Streaming Foreign Exchange Ticker Tape & Session Clocks',
+      '100% Educational Macro Research — Strictly 0 Buy/Sell Signals',
+    ],
+    stats: [
+      { value: '24+', label: 'Interbank FX Pairs' },
+      { value: '< 250ms', label: 'Streaming Latency' },
+      { value: '100%', label: 'ForexFactory Feed Ingestion' },
+      { value: '0', label: 'Noise / Buy/Sell Signals' },
+    ],
+    tags: ['Fintech', 'Real-Time Data', 'Next.js', 'Market Intelligence', 'WebSockets'],
+  },
+];
+
 export interface CaseStudy {
   id: string;
   title: string;
@@ -208,6 +257,17 @@ export interface CaseStudy {
 }
 
 export const caseStudies: CaseStudy[] = [
+  {
+    id: 'nfx3-fintech-platform',
+    title: 'NFX³ — Real-Time Institutional Forex & Bullion Intelligence Platform',
+    tags: ['Fintech & Platforms', 'AI Platforms', 'Enterprise Systems'],
+    challenge:
+      'Traders and macro analysts faced fragmented, delayed data streams across central bank policies, high-impact economic releases, and spot bullion feeds—cluttered with speculative noise and unreliable signals.',
+    solution:
+      'ISD engineered NFX³: a proprietary zero-noise market terminal aggregating sub-second OANDA interbank telemetry, automated ForexFactory calendar ingestion, CFTC COT speculative flow tracking, and central bank rate monitors.',
+    result:
+      '24/5 sub-second streaming interbank telemetry, 100% automated macroeconomic ingestion, and a unified terminal experience serving global FX & bullion participants.',
+  },
   {
     id: 'university-enrollment',
     title: 'Scaling Enrollment for a Regional University',
@@ -415,6 +475,10 @@ export const faqs = [
     q: 'How do you measure success?',
     a: 'Every engagement starts with clear KPIs tied to business outcomes — pipeline growth, enrollment targets, operational efficiency, or revenue impact. We provide regular reporting and strategic reviews to keep everything on track.',
   },
+  {
+    q: 'Does ISD Info Solutions build proprietary products or only client services?',
+    a: 'Beyond client engagements, ISD conceives, engineers, and operates proprietary high-performance software platforms. Our flagship fintech product is NFX³ (accessible at nfx3.com), an institutional-grade, real-time market intelligence terminal for global foreign exchange (Forex) and gold bullion (XAU/USD) featuring sub-second ambient telemetry, ForexFactory economic calendar ingestion, and CFTC COT flow analytics.',
+  },
 ];
 
 export const trustStats = [
@@ -479,8 +543,14 @@ export const footerServiceLinks = [
   { label: 'Salesforce & Copado DevOps', href: '/services/salesforce-devops' },
 ];
 
+export const footerProductLinks = [
+  { label: 'NFX³ Market Intelligence', href: '/products/nfx3', isExternal: false },
+  { label: 'Launch NFX3.com ↗', href: 'https://www.nfx3.com', isExternal: true },
+];
+
 export const footerCompanyLinks = [
   { label: 'About Us', href: '/about' },
+  { label: 'Proprietary Products', href: '/products/nfx3' },
   { label: 'Our Work', href: '/case-studies' },
   { label: 'Blog & Insights', href: '/insights' },
   { label: 'Contact', href: '/contact' },
