@@ -42,24 +42,25 @@ export function Nfx3ClientPage() {
       }
       intro="Conceived, architected, and operated by ISD Info Solutions — NFX3 decodes global foreign exchange markets, live XAU/USD bullion telemetry, ForexFactory calendar releases, and central bank macro policies with institutional rigour and zero noise."
     >
-      {/* Quick Launch & Status Bar */}
-      <section className="relative z-20 -mt-10 mb-6 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-white/15 bg-white/[0.04] p-4 sm:p-5 backdrop-blur-2xl shadow-xl">
+      {/* Hero Terminal Interactive Preview & Status Bar (Continuous Dark Canvas) */}
+      <PageSection variant="dark" className="pt-0 sm:pt-0 md:pt-0 pb-16 sm:pb-24">
+        {/* Quick Launch & Status Bar */}
+        <div className="relative z-20 -mt-7 sm:-mt-10 mb-10 sm:mb-14">
+          <div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-slate-700/60 bg-[#0C1322] p-4 sm:p-5 shadow-2xl ring-1 ring-white/5">
             <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-bold text-emerald-400 border border-emerald-500/20">
+              <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-bold text-emerald-400 border border-emerald-500/30">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
                 </span>
                 Live Production Platform
               </span>
-              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-300">
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-200">
                 <Radio className="h-3.5 w-3.5 text-amber-400" />
                 24/5 Interbank Feed Active
               </span>
-              <span className="hidden sm:inline-flex items-center gap-1.5 text-xs text-slate-400">
-                &bull; URL: <code className="text-amber-300 font-mono">https://www.nfx3.com</code>
+              <span className="hidden sm:inline-flex items-center gap-1.5 text-xs text-slate-300">
+                &bull; URL: <code className="text-amber-300 font-mono font-bold">https://www.nfx3.com</code>
               </span>
             </div>
 
@@ -84,10 +85,7 @@ export function Nfx3ClientPage() {
             </div>
           </div>
         </div>
-      </section>
 
-      {/* Hero Terminal Interactive Preview */}
-      <PageSection variant="dark" className="pt-6 sm:pt-10">
         <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-6">
             <Reveal>
@@ -132,13 +130,13 @@ export function Nfx3ClientPage() {
           {/* Interactive Live Telemetry Bento Display */}
           <div className="lg:col-span-6">
             <Reveal delay={0.15}>
-              <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-gradient-to-br from-card/90 via-[#0B1220]/95 to-[#070A12]/95 p-6 sm:p-7 shadow-2xl backdrop-blur-2xl ring-1 ring-white/10">
-                <div className="flex items-center justify-between border-b border-white/10 pb-4">
+              <div className="relative overflow-hidden rounded-3xl border border-slate-700/60 bg-gradient-to-br from-[#101A2E] via-[#0A101D] to-[#050811] p-6 sm:p-7 shadow-2xl ring-1 ring-white/5">
+                <div className="flex items-center justify-between border-b border-slate-800 pb-4">
                   <div className="flex items-center gap-3">
                     <span className="font-mono text-sm font-black tracking-wider text-white">
                       XAU/USD SPOT
                     </span>
-                    <span className="rounded bg-amber-400/20 px-2 py-0.5 text-[10px] font-bold tracking-wider text-amber-300 border border-amber-400/30">
+                    <span className="rounded bg-amber-400/15 px-2 py-0.5 text-[10px] font-bold tracking-wider text-amber-300 border border-amber-400/30">
                       OANDA INTERBANK
                     </span>
                   </div>
@@ -159,15 +157,15 @@ export function Nfx3ClientPage() {
                       <span className="text-xs font-normal text-slate-400">USD/oz</span>
                     </div>
                   </div>
-                  <div className="inline-flex items-center gap-1 rounded-xl bg-emerald-500/10 px-3 py-1.5 text-xs sm:text-sm font-bold text-emerald-400 border border-emerald-500/20">
+                  <div className="inline-flex items-center gap-1 rounded-xl bg-emerald-500/15 px-3 py-1.5 text-xs sm:text-sm font-bold text-emerald-400 border border-emerald-500/30">
                     <Activity className="h-3.5 w-3.5" />
                     +0.75%
                   </div>
                 </div>
 
                 {/* BID / ASK & Spread */}
-                <div className="mt-5 grid grid-cols-2 gap-3 border-t border-white/10 pt-4">
-                  <div className="rounded-xl border border-white/10 bg-white/[0.03] p-3 text-center">
+                <div className="mt-5 grid grid-cols-2 gap-3 border-t border-slate-800 pt-4">
+                  <div className="rounded-xl border border-slate-800 bg-[#0B1324]/80 p-3 text-center">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
                       Interbank Bid
                     </span>
@@ -175,7 +173,7 @@ export function Nfx3ClientPage() {
                       $4,349.12
                     </div>
                   </div>
-                  <div className="rounded-xl border border-white/10 bg-white/[0.03] p-3 text-center">
+                  <div className="rounded-xl border border-slate-800 bg-[#0B1324]/80 p-3 text-center">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
                       Interbank Ask
                     </span>
@@ -187,7 +185,7 @@ export function Nfx3ClientPage() {
 
                 {/* Micro Widgets */}
                 <div className="mt-4 grid grid-cols-2 gap-3 text-xs">
-                  <div className="rounded-xl border border-white/10 bg-white/[0.02] p-3">
+                  <div className="rounded-xl border border-slate-800 bg-[#0B1324]/60 p-3">
                     <div className="flex items-center justify-between text-slate-400 text-[11px]">
                       <span className="flex items-center gap-1.5">
                         <Calendar className="h-3 w-3 text-sky-400" />
@@ -200,7 +198,7 @@ export function Nfx3ClientPage() {
                     </p>
                   </div>
 
-                  <div className="rounded-xl border border-white/10 bg-white/[0.02] p-3">
+                  <div className="rounded-xl border border-slate-800 bg-[#0B1324]/60 p-3">
                     <div className="flex items-center justify-between text-slate-400 text-[11px]">
                       <span className="flex items-center gap-1.5">
                         <Landmark className="h-3 w-3 text-purple-400" />
@@ -214,7 +212,7 @@ export function Nfx3ClientPage() {
                   </div>
                 </div>
 
-                <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
+                <div className="mt-6 flex items-center justify-between border-t border-slate-800 pt-4">
                   <span className="text-xs text-slate-400 flex items-center gap-1.5">
                     <ShieldCheck className="h-4 w-4 text-emerald-400" />
                     100% Educational &bull; Zero Buy/Sell Signals
@@ -294,7 +292,7 @@ export function Nfx3ClientPage() {
       <PageSection variant="dark">
         <div className="grid gap-12 lg:grid-cols-[5fr_7fr] lg:items-center">
           <Reveal>
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-sky-400 mb-3 backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 rounded-full border border-sky-400/25 bg-sky-500/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-sky-300 mb-3">
               <Code2 className="h-3.5 w-3.5" />
               Engineering Behind The Product
             </div>
