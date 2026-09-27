@@ -43,9 +43,9 @@ export function Nfx3ClientPage() {
       intro="Conceived, architected, and operated by ISD Info Solutions — NFX3 decodes global foreign exchange markets, live XAU/USD bullion telemetry, ForexFactory calendar releases, and central bank macro policies with institutional rigour and zero noise."
     >
       {/* Hero Terminal Interactive Preview & Status Bar (Continuous Dark Canvas) */}
-      <PageSection variant="dark" className="pt-0 sm:pt-0 md:pt-0 pb-16 sm:pb-24">
+      <PageSection variant="dark" className="pt-4 sm:pt-6 md:pt-8 pb-16 sm:pb-24">
         {/* Quick Launch & Status Bar */}
-        <div className="relative z-20 -mt-7 sm:-mt-10 mb-10 sm:mb-14">
+        <div className="relative z-20 mb-8 sm:mb-12">
           <div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-slate-700/60 bg-[#0C1322] p-4 sm:p-5 shadow-2xl ring-1 ring-white/5">
             <div className="flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-bold text-emerald-400 border border-emerald-500/30">
