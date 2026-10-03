@@ -1,6 +1,6 @@
 # ISD Info Solutions
 
-> ISD Info Solutions is an enterprise digital growth engineering and technology solutions agency. We engineer high-converting web platforms, omni-channel search and AI discoverability (SEO, AEO, GEO), custom AI platforms, education ecosystem solutions, and Salesforce & Copado DevOps.
+> ISD Info Solutions is an enterprise digital growth engineering and technology solutions company. We engineer high-converting web platforms, omni-channel search and AI discoverability (SEO, AEO, GEO), custom AI platforms, education ecosystem solutions, and Salesforce & Copado DevOps.
 
 - **Website**: https://isdinfosolutions.com
 - **Brand Names**: ISD Info Solutions, ISD, ISD Infosolutions

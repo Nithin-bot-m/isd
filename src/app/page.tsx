@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     absolute: 'ISD Info Solutions | Enterprise Digital Growth, Web Platforms & AI',
   },
   description:
-    'ISD Info Solutions is an enterprise digital growth and technology agency engineering high-converting web platforms, custom AI systems, performance marketing, and Salesforce DevOps.',
+    'ISD Info Solutions is an enterprise digital growth and technology company engineering high-converting web platforms, custom AI systems, performance marketing, and Salesforce DevOps.',
   keywords: [
     'ISD Info Solutions',
     'isd info solutions',

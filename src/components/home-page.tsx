@@ -120,7 +120,7 @@ function HeroSection() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-base sm:text-lg md:text-xl leading-relaxed text-slate-300/90 font-normal">
-            <strong className="text-white font-semibold">ISD Info Solutions</strong> is an enterprise digital growth and technology agency. We deliver strategic digital marketing, custom AI platforms, education ecosystems, and Salesforce DevOps for organizations scaling without silos.
+            <strong className="text-white font-semibold">ISD Info Solutions</strong> is an enterprise digital growth and technology company. We deliver strategic digital marketing, custom AI platforms, education ecosystems, and Salesforce DevOps for organizations scaling without silos.
           </p>
 
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">

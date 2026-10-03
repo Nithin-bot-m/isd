@@ -441,7 +441,7 @@ export const insights: Insight[] = [
 export const faqs = [
   {
     q: 'What is ISD Info Solutions?',
-    a: 'ISD Info Solutions (accessible at isdinfosolutions.com) is an enterprise digital growth engineering and technology agency. We partner with ambitious organizations to build high-performance web platforms, engineer omni-channel search & AI discoverability (SEO, AEO, GEO), build custom AI platforms, and manage cloud & CRM architectures that drive measurable, compounding business growth.',
+    a: 'ISD Info Solutions (accessible at isdinfosolutions.com) is an enterprise digital growth engineering and technology company. We partner with ambitious organizations to build high-performance web platforms, engineer omni-channel search & AI discoverability (SEO, AEO, GEO), build custom AI platforms, and manage cloud & CRM architectures that drive measurable, compounding business growth.',
   },
   {
     q: 'What services does ISD Info Solutions provide?',

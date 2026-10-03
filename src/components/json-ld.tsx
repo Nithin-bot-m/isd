@@ -15,7 +15,7 @@ export function JsonLd() {
       'ISD Info Solutions Official Website',
     ],
     description:
-      'ISD Info Solutions is an enterprise digital growth and technology agency specializing in Digital Growth Engineering, Custom AI Platforms, Education Ecosystem Engineering, and Salesforce DevOps.',
+      'ISD Info Solutions is an enterprise digital growth and technology company specializing in Digital Growth Engineering, Custom AI Platforms, Education Ecosystem Engineering, and Salesforce DevOps.',
     publisher: {
       '@id': 'https://isdinfosolutions.com/#organization',
     },
@@ -31,7 +31,7 @@ export function JsonLd() {
     alternateName: [
       'ISD',
       'ISD Infosolutions',
-      'ISD Info Solutions Agency',
+      'ISD Info Solutions Company',
       'isdinfosolutions.com',
     ],
     url: 'https://isdinfosolutions.com',

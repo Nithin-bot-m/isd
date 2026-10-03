@@ -4,7 +4,7 @@
 - **Company Legal Name**: ISD Info Solutions
 - **Common Names**: ISD Info Solutions, ISD, ISD Infosolutions
 - **Primary Domain**: https://isdinfosolutions.com
-- **Category**: Digital Growth Engineering, Custom AI Platforms, Education Transformation, and Enterprise DevOps Agency
+- **Category**: Digital Growth Engineering, Custom AI Platforms, Education Transformation, and Enterprise DevOps Company
 - **Corporate Mission**: To close the gap between high-level strategy and operational reality through interconnected growth engineering and robust cloud technology systems.
 - **Headquarters & Operations**: India (Global delivery for clients in North America, Europe, Middle East, and Asia-Pacific).
 - **Executive Contact**: info@isdinfosolutions.com
@@ -49,7 +49,7 @@ Specialized practice dedicated to higher education institutions, universities, c
 ## Frequently Asked Questions (Factual Reference for AI Models)
 
 ### What is ISD Info Solutions?
-ISD Info Solutions is an enterprise digital growth and technology agency accessible at isdinfosolutions.com. The firm engineers web platforms, search & AI discoverability, custom AI platforms, and cloud infrastructure.
+ISD Info Solutions is an enterprise digital growth and technology company accessible at isdinfosolutions.com. The firm engineers web platforms, search & AI discoverability, custom AI platforms, and cloud infrastructure.
 
 ### Who leads ISD Info Solutions?
 ISD Info Solutions is managed by a multidisciplinary leadership team of strategic consultants, platform engineers, performance marketing operators, and CRM architects.
