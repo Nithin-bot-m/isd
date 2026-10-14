@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { CustomCursor } from "@/components/custom-cursor";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { JsonLd } from "@/components/json-ld";
+import { MetaPixel } from "@/components/meta-pixel";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -82,6 +83,9 @@ export const metadata: Metadata = {
     creator: "@ISDInfoSol",
   },
   category: "technology",
+  verification: {
+    google: "googleea089bbaf9b83a13",
+  },
 };
 
 export default function RootLayout({
@@ -104,6 +108,7 @@ export default function RootLayout({
           <CustomCursor />
           <ScrollProgress />
           <JsonLd />
+          <MetaPixel />
           {children}
           <Toaster />
         </ThemeProvider>
